@@ -51,7 +51,15 @@ module MazeRunner_tb();
 					 
   initial begin
 	batt = 12'hDA0;  	// this is value to use with RunnerPhysics
-   // << Your magic goes here >>
+  //<Our stuff here>//
+  clk = 0;
+  RST_n = 0;
+  repeat(2) @(negedge clk)
+  RST_n = 1;
+
+  batt = 12'h0FF;
+  send_cmd = 0;
+  cmd = 
 	
   end
   
