@@ -19,7 +19,7 @@ module maze_solve(cmd_md, cmd0, lft_opn, rght_opn, mv_cmplt,sol_cmplt, clk, rst_
 	assign stp_rght = ~stp_lft;
 
 
-	typedef enum logic [2:0] {IDLE, WAIT_FRWRD, STRT_HDNG, NEW_HDNG, WAIT_HDNG} state_t;
+	typedef enum logic [2:0] {IDLE, WAIT_FRWRD, STRT_HDNG,STRT_MV, NEW_HDNG, WAIT_HDNG} state_t;
 
 	state_t state, nxt_state;
 	 
@@ -69,7 +69,9 @@ module maze_solve(cmd_md, cmd0, lft_opn, rght_opn, mv_cmplt,sol_cmplt, clk, rst_
 					else begin
 						//pull a 180
 						change_hdng = 1;
-						new_hdng = 12'h7FF;
+						new_hdng = (dsrd_hdng === 12'h000)?12'h7ff:
+											 (dsrd_hdng === 12'hC00)?12'h3ff:
+											 (dsrd_hdng === 12'h7ff)?12'h000:12'hC00;;
 						nxt_state = STRT_HDNG;
 					end
 				end
@@ -93,7 +95,9 @@ module maze_solve(cmd_md, cmd0, lft_opn, rght_opn, mv_cmplt,sol_cmplt, clk, rst_
 					else begin
 						//pull a 180
 						change_hdng = 1;
-						new_hdng = 12'h7FF;
+						new_hdng = (dsrd_hdng === 12'h000)?12'h7ff:
+											 (dsrd_hdng === 12'hC00)?12'h3ff:
+											 (dsrd_hdng === 12'h7ff)?12'h000:12'hC00;;
 						nxt_state = STRT_HDNG;
 					end
 				end
@@ -104,10 +108,14 @@ module maze_solve(cmd_md, cmd0, lft_opn, rght_opn, mv_cmplt,sol_cmplt, clk, rst_
 						end
 	WAIT_HDNG: begin
 							if(mv_cmplt) begin
-							 strt_mv = 1;
-							 nxt_state = WAIT_FRWRD;
+							
+							 nxt_state = STRT_MV;
 							end
 						end
+	STRT_MV: begin
+			strt_mv = 1;
+			nxt_state = WAIT_FRWRD;
+	end
 	endcase
 	end
 

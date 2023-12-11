@@ -1,8 +1,8 @@
 
 ////////// I Term ////////////////////////
-module I_term(err_sat,moverflowing,hdng_vld,clk,rst_n,I_term);
+module I_term(err_sat,moving,hdng_vld,clk,rst_n,I_term);
 	input signed [9:0]err_sat;
-	input moverflowing,hdng_vld , clk, rst_n;
+	input moving,hdng_vld , clk, rst_n;
 	output signed [11:0]I_term;
 
 	logic signed [15:0]integrator;
@@ -18,7 +18,7 @@ module I_term(err_sat,moverflowing,hdng_vld,clk,rst_n,I_term);
 	assign overflow = (integrator[15] === err_ext[15] && err_ext[15] !== sum[15] )?1'b1:1'b0;
 	assign update = (~overflow && hdng_vld)?1'b1:1'b0;
 
-	assign nxt_integrator = (~moverflowing)?16'h0000:
+	assign nxt_integrator = (~moving)?16'h0000:
 													(update)?sum:integrator;
 							
 							
@@ -93,11 +93,11 @@ module P_term(error, P_term_out);
 
 endmodule
 
-module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moverflowing , hdng_vld, frwrd_spd , at_hdng);
+module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moving , hdng_vld, frwrd_spd , at_hdng);
 	input signed [11:0] actl_hdng;
 	input signed [11:0] dsrd_hdng;
 	input signed [10:0] frwrd_spd;
-	input clk, rst_n, moverflowing, hdng_vld;
+	input clk, rst_n, moving, hdng_vld;
 	output signed [11:0] lft_spd;
 	output signed [11:0] rght_spd;
 	output at_hdng;
@@ -129,7 +129,7 @@ module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moverflowing
 
 	assign ext_P_term_out = {P_term_out[13],P_term_out} ;
 
-	I_term I(.err_sat(err_sat),.moverflowing(moverflowing),.hdng_vld(hdng_vld),.clk(clk),.rst_n(rst_n),.I_term(I_term_out));
+	I_term I(.err_sat(err_sat),.moving(moving),.hdng_vld(hdng_vld),.clk(clk),.rst_n(rst_n),.I_term(I_term_out));
 
 	assign ext_I_term_out = {{3{I_term_out[11]}},I_term_out} ;
 
@@ -139,9 +139,9 @@ module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moverflowing
 
 	assign sum = ext_D_term_out + ext_I_term_out + ext_P_term_out ;
 
-	assign lft_spd =  (moverflowing)? sum[14:3] +  ext_frwrd_spd : 12'h000;
+	assign lft_spd =  (moving)? sum[14:3] +  ext_frwrd_spd : 12'h000;
 
-	assign rght_spd =  (moverflowing)?  ext_frwrd_spd - sum[14:3]: 12'h000;
+	assign rght_spd =  (moving)?  ext_frwrd_spd - sum[14:3]: 12'h000;
 	assign at_hdng = (err_sat < low_err_pos && err_sat > low_err_neg);
 
 
