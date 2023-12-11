@@ -7,7 +7,7 @@
 module inert_intf(clk,rst_n,strt_cal,cal_done,heading,rdy,IR_Dtrm,
                   SS_n,SCLK,MOSI,MISO,INT,moving,en_fusion);
 
-  parameter FAST_SIM = 0;	// used to speed up simulation
+  parameter FAST_SIM = 1;	// used to speed up simulation
   
   input logic clk, rst_n;
   input logic MISO;							// SPI input from inertial sensor

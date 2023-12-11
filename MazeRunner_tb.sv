@@ -48,10 +48,92 @@ module MazeRunner_tb();
 					 .A2D_SS_n(A2D_SS_n),.A2D_SCLK(A2D_SCLK),.A2D_MOSI(A2D_MOSI),
 					 .A2D_MISO(A2D_MISO),.hall_n(hall_n),.batt(batt));
 	
+  
 					 
   initial begin
 	batt = 12'hDA0;  	// this is value to use with RunnerPhysics
-   // << Your magic goes here >>
+   // << Your magic goes here >>'
+   clk = 0;
+   RST_n = 0;
+   @(posedge clk);
+   @(negedge clk);
+   RST_n = 1;
+
+   //calibrate command test
+   cmd = 16'h0000;
+   send_cmd = 1;
+   @(negedge clk);
+   send_cmd = 0;
+   @(posedge resp_rdy);
+    //do self check
+
+
+
+   @(posedge clk);
+   @(negedge clk);
+
+   
+   
+   //change heading command
+   
+   cmd = 16'h23FF;
+   send_cmd = 1;
+   @(negedge clk);
+   send_cmd = 0;
+   @(posedge resp_rdy);
+  //do self check
+
+   @(posedge clk);
+   @(negedge clk);
+  
+
+  //change heading command
+   
+   cmd = 16'h2000;
+   send_cmd = 1;
+   @(negedge clk);
+   send_cmd = 0;
+   @(posedge resp_rdy);
+  //do self check
+
+   @(posedge clk);
+   @(negedge clk);
+
+  //move command to stop at left opening
+  cmd = 16'h4002;
+  send_cmd = 1;
+  @(negedge clk);
+   send_cmd = 0;
+  @(posedge resp_rdy);
+  @(posedge clk);
+  @(negedge clk);
+
+  
+
+  //maze solve command with left affinity
+  cmd = 16'h6000;
+  send_cmd = 1;
+  @(negedge clk);
+   send_cmd = 0;
+  @(posedge resp_rdy);
+  @(posedge clk);
+  @(negedge clk);
+ 
+ 
+
+
+  
+  //
+    
+
+   
+
+  $stop();
+
+
+
+
+
 	
   end
   
