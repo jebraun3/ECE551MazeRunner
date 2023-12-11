@@ -27,7 +27,8 @@ compile -map_effort medium
 
 #flatten hirearchy to remove designwares and compile again
 ungroup -all -flatten
-compile -map_effort high 
+set_fix_hold clk
+compile -map_effort medium
 
 # timing and area reports
 report_timing -delay min  > min_timing.txt

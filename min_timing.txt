@@ -7,15 +7,15 @@ Report : timing
         -max_paths 1
 Design : MazeRunner
 Version: U-2022.12-SP4
-Date   : Sun Dec 10 18:46:32 2023
+Date   : Sun Dec 10 22:34:18 2023
 ****************************************
 
 Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
 Wire Load Model Mode: enclosed
 
-  Startpoint: iIR/iDRV/cnt_reg[0]
+  Startpoint: iIR/smpl_cnt_reg[0]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: iIR/iDRV/cnt_reg[0]
+  Endpoint: iIR/smpl_cnt_reg[0]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: min
@@ -24,26 +24,27 @@ Wire Load Model Mode: enclosed
   ------------------------------------------------
   MazeRunner         16000                 saed32lvt_tt0p85v25c
 
-  Point                                      Incr       Path
-  -------------------------------------------------------------
-  clock clk (rise edge)                      0.00       0.00
-  clock network delay (ideal)                0.00       0.00
-  iIR/iDRV/cnt_reg[0]/CLK (DFFARX1_LVT)      0.00       0.00 r
-  iIR/iDRV/cnt_reg[0]/QN (DFFARX1_LVT)       0.06       0.06 f
-  iIR/iDRV/cnt_reg[0]/D (DFFARX1_LVT)        0.01       0.07 f
-  data arrival time                                     0.07
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  iIR/smpl_cnt_reg[0]/CLK (DFFX1_LVT)      0.00       0.00 r
+  iIR/smpl_cnt_reg[0]/QN (DFFX1_LVT)       0.06       0.06 f
+  U2198/Y (AO22X1_LVT)                     0.05       0.11 f
+  iIR/smpl_cnt_reg[0]/D (DFFX1_LVT)        0.01       0.12 f
+  data arrival time                                   0.12
 
-  clock clk (rise edge)                      0.00       0.00
-  clock network delay (ideal)                0.00       0.00
-  clock uncertainty                          0.12       0.12
-  iIR/iDRV/cnt_reg[0]/CLK (DFFARX1_LVT)      0.00       0.12 r
-  library hold time                         -0.01       0.11
-  data required time                                    0.11
-  -------------------------------------------------------------
-  data required time                                    0.11
-  data arrival time                                    -0.07
-  -------------------------------------------------------------
-  slack (VIOLATED)                                     -0.05
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.12       0.12
+  iIR/smpl_cnt_reg[0]/CLK (DFFX1_LVT)      0.00       0.12 r
+  library hold time                       -0.01       0.12
+  data required time                                  0.12
+  -----------------------------------------------------------
+  data required time                                  0.12
+  data arrival time                                  -0.12
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
 
 
 1

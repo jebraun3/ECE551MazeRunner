@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : MazeRunner
 Version: U-2022.12-SP4
-Date   : Sun Dec 10 18:46:32 2023
+Date   : Sun Dec 10 22:34:18 2023
 ****************************************
 
 Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
@@ -29,14 +29,14 @@ Wire Load Model Mode: enclosed
   clock network delay (ideal)                                           0.00       0.00
   iNAV/frwrd_spd_reg[3]/CLK (DFFARX1_LVT)                               0.00       0.00 r
   iNAV/frwrd_spd_reg[3]/QN (DFFARX1_LVT)                                0.07       0.07 f
-  U2828/Y (INVX2_LVT)                                                   0.06       0.12 r
-  U2651/Y (AO21X1_LVT)                                                  0.05       0.17 r
-  U2650/Y (AO21X1_LVT)                                                  0.05       0.23 r
-  U2648/Y (AO21X1_LVT)                                                  0.08       0.31 r
-  U2834/Y (INVX0_LVT)                                                   0.04       0.35 f
-  U3363/Y (INVX1_LVT)                                                   0.06       0.41 r
-  U1282/Y (AND2X1_LVT)                                                  0.06       0.47 r
-  U1281/Y (AND2X1_LVT)                                                  0.04       0.51 r
+  U2825/Y (INVX2_LVT)                                                   0.06       0.12 r
+  U2648/Y (AO21X1_LVT)                                                  0.05       0.17 r
+  U2647/Y (AO21X1_LVT)                                                  0.05       0.23 r
+  U2645/Y (AO21X1_LVT)                                                  0.08       0.31 r
+  U2932/Y (INVX0_LVT)                                                   0.04       0.35 f
+  U3461/Y (INVX1_LVT)                                                   0.06       0.41 r
+  U1280/Y (AND2X1_LVT)                                                  0.06       0.47 r
+  U1279/Y (AND2X1_LVT)                                                  0.04       0.51 r
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_5/CO (FADDX1_LVT)       0.08       0.59 r
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_6/CO (FADDX1_LVT)       0.08       0.67 r
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_7/CO (FADDX1_LVT)       0.08       0.75 r
@@ -59,7 +59,7 @@ Wire Load Model Mode: enclosed
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_24/CO (FADDX1_LVT)      0.08       2.14 r
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_25/CO (FADDX1_LVT)      0.08       2.22 r
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_26/S (FADDX1_LVT)       0.10       2.33 f
-  U1258/Y (AO22X1_LVT)                                                  0.05       2.38 f
+  U1256/Y (AO22X1_LVT)                                                  0.05       2.38 f
   iNEMO/iINT/yaw_int_reg[26]/D (DFFARX1_LVT)                            0.01       2.39 f
   data arrival time                                                                2.39
 
