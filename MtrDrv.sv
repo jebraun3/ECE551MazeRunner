@@ -9,19 +9,36 @@ logic signed [12:0] scale;
 
 DutyScaleROM ROM(.clk(clk),.batt_level(vbatt[9:4]),.scale(scale));
 
+
+logic signed [11:0] lft_spd_ff, rght_spd_ff;
+
+always_ff @(posedge clk) begin
+	lft_spd_ff <= lft_spd;
+	rght_spd_ff <= rght_spd;
+end
+
 logic signed [23:0] lft_prod , rght_prod;
 logic [11:0] lft_duty , rght_duty;
-assign lft_prod = scale * lft_spd;
-assign rght_prod = scale * rght_spd;
+
+
+assign lft_prod = scale * lft_spd_ff;
+assign rght_prod = scale * rght_spd_ff;
+
+logic signed [23:0] lft_prod_ff , rght_prod_ff;
+
+always_ff @(posedge clk) begin
+	lft_prod_ff <= lft_prod;
+	rght_prod_ff <= rght_prod;
+end
 
 logic signed [11:0] lft_scaled, rght_scaled;
 
 
 logic signed [12:0]  lft_div, rght_div;
 
-assign lft_div = lft_prod[23:11];
+assign lft_div = lft_prod_ff[23:11];
 
-assign rght_div = rght_prod[23:11];
+assign rght_div = rght_prod_ff[23:11];
 
 
 

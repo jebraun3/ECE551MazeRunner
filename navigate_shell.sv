@@ -12,7 +12,7 @@ module navigate(clk,rst_n,strt_hdng,strt_mv,stp_lft,stp_rght,mv_cmplt,hdng_rdy,m
   output logic mv_cmplt;			// asserted when heading or forward move complete
   output logic moving;				// enables integration in PID and in inertial_integrator
   output en_fusion;					// Only enable fusion (IR reading affect on nav) when moving forward at decent speed.
-  input at_hdng;					// from PID, indicates heading close enough to consider heading complete.
+  input  at_hdng;					// from PID, indicates heading close enough to consider heading complete.
   input lft_opn,rght_opn,frwrd_opn;	// from IR sensors, indicates available direction.  Might stop at rise of lft/rght
   output reg [10:0] frwrd_spd;		// unsigned forward speed setting to PID
   
@@ -26,6 +26,17 @@ module navigate(clk,rst_n,strt_hdng,strt_mv,stp_lft,stp_rght,mv_cmplt,hdng_rdy,m
   localparam MAX_FRWRD = 11'h2A0;		// max forward speed
   localparam MIN_FRWRD = 11'h0D0;		// minimum duty at which wheels will turn
   
+  //rise edge detector for at_hdng
+  logic at_hdng_flopped, at_hdng_rise;
+
+  always_ff @(posedge clk) begin
+    at_hdng_flopped <= at_hdng;
+  end
+
+  assign at_hdng_rise = (at_hdng & (~at_hdng_flopped));
+
+
+
   ////////////////////////////////
   // Now form forward register //
   //////////////////////////////
@@ -79,7 +90,7 @@ module navigate(clk,rst_n,strt_hdng,strt_mv,stp_lft,stp_rght,mv_cmplt,hdng_rdy,m
 		 end
 		 end
   HEADING:  begin
-            if(at_hdng) begin
+            if(at_hdng_rise) begin
             mv_cmplt = 1;
 			nxt_state = IDLE;
 			end 

@@ -2,13 +2,13 @@ module IR_math(lft_opn, rght_opn,lft_IR,rght_IR, IR_Dtrm,en_fusion,dsrd_hdng,dsr
 
 parameter NOM_IR = 12'h970;
 
-input signed  lft_opn , rght_opn;
-input   [11:0]lft_IR;
-input   [11:0]rght_IR;
-input signed  [8:0]IR_Dtrm;
-input signed  en_fusion;
-input signed  [11:0]dsrd_hdng;
-output signed  [11:0]dsrd_hdng_adj;
+input logic signed  lft_opn , rght_opn;
+input  logic [11:0]lft_IR;
+input  logic [11:0]rght_IR;
+input logic signed  [8:0]IR_Dtrm;
+input logic signed  en_fusion;
+input  logic signed  [11:0]dsrd_hdng;
+output logic signed  [11:0]dsrd_hdng_adj;
 
 
 logic signed [12:0] diff_lftright;
@@ -38,6 +38,8 @@ logic signed [12:0]div2sum_extmux2_extDterm;
 assign div2sum_extmux2_extDterm = {sum_extmux2_extDterm[12],sum_extmux2_extDterm[12:1]};
 logic signed [12:0]fin; 
 assign fin = div2sum_extmux2_extDterm + dsrd_hdng;
+
+
 assign dsrd_hdng_adj = (en_fusion)?fin[11:0]:dsrd_hdng;
 
 
