@@ -49,17 +49,14 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
 	always_comb begin
 		nxt_state = state;
 		change_dsrd_hdng = 0;
-		change_stp = 0;
-		new_hdng = '0;
-		new_stp_lft = 0;
-		new_stp_rght = 0;
-		strt_mv = 0;
 		strt_hdng = 0;
 		cmd_md = 1;
 		strt_cal = 0;
 		clr_cmd_rdy = 0;
 		in_cal = 0;
 		send_resp = 0;
+		new_hdng = '0;
+		strt_mv = 0;
 		case (state)
 			IDLE:	begin
 							if(cmd_rdy) begin

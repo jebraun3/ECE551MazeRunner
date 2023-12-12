@@ -1,0 +1,351 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+!s12c _opt2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+!s11f vlog 2023.2_1 2023.05, May 12 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner
+T_opt
+!s110 1702329126
+VL2DXDg;5_Ok92P5d`MJMU0
+Z4 04 13 4 work MazeRunner_tb fast 0
+=7-000ae431a4f1-65777b26-41e73-266216
+R1
+Z5 !s12b OEM100
+Z6 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -L SAED32_lib +acc -L SAED32_lib
+Z7 tCvgOpt 0
+n@_opt
+Z8 OE;O;2023.2_1;77
+R3
+T_opt1
+!s110 1702354219
+VfLn2C;eGgz@W@F753]zNh0
+R4
+=1-000ae431a4f1-6577dd2a-7c645-1229ca
+R1
+R5
+R6
+o-quiet -auto_acc_if_foreign -work work -L SAED32_lib +acc
+R7
+n@_opt1
+R8
+T_opt2
+!s110 1702345382
+Va@jX_4BGNP`o307@WJ@153
+R4
+=1-000ae431a4f1-6577baa5-aafd0-48c28
+R1
+R5
+R6
+o-quiet -auto_acc_if_foreign -work work -L SAED32_lib
+R7
+n@_opt2
+R8
+R3
+vADC128S_FC
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1702345355
+!i10b 1
+!s100 RbWH89FETlJBko;>AX0NK1
+I>2=:j>ifE47nVUQ=;Q12]0
+S1
+Z11 d/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist
+Z12 w1702327185
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv
+!i122 85
+L0 1 111
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OE;L;2023.2_1;77
+r1
+!s85 0
+31
+Z15 !s108 1702345355.000000
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv|
+!i113 0
+Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@a@d@c128@s_@f@c
+vinverse_PWM12e
+Z17 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RunnerPhysics.sv
+R9
+R10
+!i10b 1
+!s100 [RcoJDa?7llLWiCA6Y18G0
+IXihn9OZ1HTRlXODoQ=hjJ1
+S1
+R11
+Z18 w1702051444
+Z19 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RunnerPhysics.sv
+Z20 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RunnerPhysics.sv
+!i122 79
+L0 363 49
+R13
+R14
+r1
+!s85 0
+31
+R15
+Z21 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RunnerPhysics.sv|
+Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RunnerPhysics.sv|
+!i113 0
+R16
+R7
+ninverse_@p@w@m12e
+vMazeRunner
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg
+!s110 1702354200
+!i10b 1
+!s100 jSb2`ah9@lAl0lY0XNPG<0
+I3i1Ub:Jg]1`H]n@gHlmBP3
+R11
+w1702354191
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg
+!i122 86
+L0 8 7848
+R13
+R14
+r1
+!s85 0
+31
+!s108 1702354200.000000
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@maze@runner
+vMazeRunner_tb
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner_tb.sv
+R9
+R10
+!i10b 1
+!s100 10K>@KkUDLVA[CFL96@;T1
+I[Z_jhlem51G7;[n>aTWN]3
+S1
+R11
+w1702345298
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner_tb.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner_tb.sv
+!i122 77
+L0 2 145
+R13
+R14
+r1
+!s85 0
+31
+!s108 1702345354.000000
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner_tb.sv|
+!i113 0
+R16
+R7
+n@maze@runner_tb
+vRemoteComm
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RemoteComm.sv
+R9
+R10
+!i10b 1
+!s100 OgN^RkMBiUm@EgBbn?4n51
+IVHWA0maR8X3TGJln[X>4Q3
+S1
+R11
+R12
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RemoteComm.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RemoteComm.sv
+!i122 78
+L0 1 96
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/RemoteComm.sv|
+!i113 0
+R16
+R7
+n@remote@comm
+vRunnerPhysics
+R17
+R9
+R10
+!i10b 1
+!s100 6e?ZH;HBIWA<<l92=V1]i2
+IV4c>gVHj8^6o=QfE`i8Ro2
+S1
+R11
+R18
+R19
+R20
+!i122 79
+L0 1 358
+R13
+R14
+r1
+!s85 0
+31
+R15
+R21
+R22
+!i113 0
+R16
+R7
+n@runner@physics
+vSPI_ADC128S
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_ADC128S.sv
+R9
+R10
+!i10b 1
+!s100 93oj0i;UV@::cHMPGHMJ>1
+IY1d41]B:azJWAzgk52b0C0
+S1
+R11
+R12
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_ADC128S.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_ADC128S.sv
+!i122 83
+L0 1 140
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_ADC128S.sv|
+!i113 0
+R16
+R7
+n@s@p@i_@a@d@c128@s
+vSPI_iNEMO4
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv
+R9
+R10
+!i10b 1
+!s100 ;l4P5T7LQK5?fke^m[CPm3
+IEUW?OkB=:YdheMWHP_VaZ3
+S1
+R11
+w1702328574
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv
+!i122 84
+L0 2 196
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv|
+!i113 0
+R16
+R7
+n@s@p@i_i@n@e@m@o4
+vUART
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART.sv
+R9
+R10
+!i10b 1
+!s100 L2UBb[PP6?Goj^Ee5:1YK1
+IdV`7;ked817?jbf905Pnl1
+S1
+R11
+w1698419065
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART.sv
+!i122 80
+L0 1 24
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART.sv|
+!i113 0
+R16
+R7
+n@u@a@r@t
+vUART_rcv
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv
+R9
+R10
+!i10b 1
+!s100 749l7LJmGJeW[2cZ^2o=@3
+Im9R_738C`hhA5bRW5a:oc3
+S1
+R11
+w1702344808
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv
+!i122 81
+L0 1 120
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv|
+!i113 0
+R16
+R7
+n@u@a@r@t_rcv
+vUART_tx
+2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_tx.sv
+R9
+R10
+!i10b 1
+!s100 bP7e_J1XWIaRDZ6[nJ:BT1
+Im:Dilja[f7z_o`oBhlSAW2
+S1
+R11
+w1702340895
+8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_tx.sv
+F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_tx.sv
+!i122 82
+L0 1 113
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_tx.sv|
+!i113 0
+R16
+R7
+n@u@a@r@t_tx

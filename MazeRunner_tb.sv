@@ -110,7 +110,7 @@ module MazeRunner_tb();
 
   
 
-  //maze solve command with left affinity
+  //maze solve command with right affinity
   cmd = 16'h6000;
   send_cmd = 1;
   @(negedge clk);

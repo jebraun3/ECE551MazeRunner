@@ -43,11 +43,11 @@ assign rght_div = rght_prod_ff[23:11];
 
 
 assign lft_scaled =  (lft_div[12] === 0 && lft_div[11])?12'b011111111111:
-									 (lft_div[11] === 1 && (!lft_div[11]))?12'b100000000000:
+					(lft_div[12] === 1 && (!lft_div[11]))?12'b100000000000:
 										lft_div[11:0];
 										
 assign rght_scaled =  (rght_div[12] === 0 && rght_div[11])?12'b011111111111:
-									 (rght_div[11] === 1 && (!rght_div[11]))?12'b100000000000:
+									 (rght_div[12] === 1 && (!rght_div[11]))?12'b100000000000:
 										rght_div[11:0];										
 
 

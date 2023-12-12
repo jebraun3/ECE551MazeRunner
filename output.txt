@@ -1,0 +1,1752 @@
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/reset_synch.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM8.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM12.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:123: The value 0000 is too large for the numeric data type being used (VER-1)
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv
+Compiling source file /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/DutyScaleROM.sv
+
+Statistics for case statements in always block at line 74 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            82            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine navigate line 32 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| at_hdng_flopped_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine navigate line 43 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    frwrd_spd_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine navigate line 58 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       q1_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       q2_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine navigate line 136 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 45 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 30 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv:39: Netlist for always_ff block does not contain a flip-flop. (ELAB-976)
+
+Inferred memory devices in process
+	in routine reset_synch line 9 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/reset_synch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rst_n_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       ff1_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 49 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            63            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine cmd_proc line 21 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    dsrd_hdng_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_proc line 29 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    stp_rght_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     stp_lft_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_proc line 41 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv:70: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 94 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           102            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inert_intf line 48 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      timer_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 55 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      yawL_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 60 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      yawH_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 65 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ff1_INT_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     ff2_INT_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 160 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:112: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:168: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:188: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:191: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:205: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:207: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:214: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 65 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            76            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 56 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 111 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    yaw_comp_reg     | Flip-flop |  19   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 127 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   yaw_scaled_reg    | Flip-flop |  19   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 137 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cntr_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 153 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     vld_ff1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     vld_ff2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 176 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 195 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_off_reg     | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:22: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:23: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:24: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:26: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:27: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:28: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:31: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:33: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:36: signed to unsigned assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:38: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:43: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 48 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            55            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine maze_solve line 11 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    dsrd_hdng_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine maze_solve line 97 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv:131: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine MazeRunner line 130 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv'.
+=======================================================================================
+|        Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================
+| adj_dsrd_hdng_pipelined_reg | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv:39: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv:41: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv:45: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv:49: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv:55: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv:56: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine MtrDrv line 15 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   lft_spd_ff_reg    | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+|   rght_spd_ff_reg   | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MtrDrv line 29 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   lft_prod_ff_reg   | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+|  rght_prod_ff_reg   | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:15: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:21: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:26: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine I_term line 30 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   integrator_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:73: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine D_term line 60 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       q2_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       q1_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine D_term line 76 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     D_term_reg      | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:90: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine P_term line 94 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   P_term_out_reg    | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:125: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:126: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:128: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:134: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:138: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:142: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:149: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv:150: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine PID line 127 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     err_sat_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PID line 148 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lft_spd_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+|    rght_spd_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+|     at_hdng_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 31 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            36            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine piezo_drv line 12 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     dur_cnt_reg     | Flip-flop |  24   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine piezo_drv line 19 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    freq_cnt_reg     | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine piezo_drv line 172 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PWM8 line 16 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PWM8 line 28 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PWM_sig_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PWM12 line 35 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM12.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PWM1_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PWM12 line 53 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM12.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PWM2_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PWM12 line 74 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM12.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:158: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:159: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:164: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:168: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:175: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:181: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 195 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           208            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 319 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           329            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 92 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       tmr_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 99 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     vbatt4_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt4_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     vbatt1_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt1_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     vbatt2_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt2_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     vbatt3_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt3_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 121 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     cntr_IR_reg     | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 128 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rght_IR_prev3_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rght_IR_reg     | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rght_IR_prev1_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rght_IR_prev2_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 142 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  lft_IR_prev3_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     lft_IR_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  lft_IR_prev1_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  lft_IR_prev2_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 180 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     IR_Dtrm_reg     | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 189 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 274 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 280 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rght_accum_reg    | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 289 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 298 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rght_off_reg_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   lft_off_reg_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf line 313 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cal_state_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 56 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            62            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 21 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    SCLK_div_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 35 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 43 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MISO_smpl_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 48 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shft_reg_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 97 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 105 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      SS_n_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mnrch line 115 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 34 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 75 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            79            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_rcv line 30 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rcv line 48 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rcv line 67 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rcv line 98 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rcv line 105 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 79 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            88            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_tx line 26 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 35 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 46 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 57 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 68 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 36 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            43            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 23 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    upperbyte_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 28 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 63 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     cmd_rdy_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 12 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/DutyScaleROM.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine DutyScaleROM line 12 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/DutyScaleROM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      entry_reg      | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_math.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM8.db'. (DDB-24)
+Warning: Overwriting design file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.db'. (DDB-24)
+Loaded 24 designs.
+Current design is 'navigate'.
+
+  Linking design 'MazeRunner'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  MazeRunner                  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.db
+  saed32lvt_tt0p85v25c (library)
+                              /cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db
+  saed32io_wb_tt1p05v25c_2p5v (library)
+                              /cae/apps/data/saed32_edk-2022/lib/io_std/db_nldm/saed32io_wb_tt1p05v25c_2p5v.db
+  * (23 designs)              /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.db, etc
+
+Information: Building the design 'navigate' instantiated from design 'MazeRunner' with
+	the parameters "1". (HDL-193)
+
+Statistics for case statements in always block at line 74 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            82            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine navigate_FAST_SIM1 line 32 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| at_hdng_flopped_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine navigate_FAST_SIM1 line 43 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    frwrd_spd_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine navigate_FAST_SIM1 line 58 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       q1_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       q2_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine navigate_FAST_SIM1 line 136 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate_shell.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (navigate_FAST_SIM1)
+Information: Building the design 'inert_intf' instantiated from design 'MazeRunner' with
+	the parameters "1". (HDL-193)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv:70: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 94 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           102            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inert_intf_FAST_SIM1 line 48 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      timer_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_FAST_SIM1 line 55 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      yawL_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_FAST_SIM1 line 60 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      yawH_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_FAST_SIM1 line 65 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ff1_INT_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     ff2_INT_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_FAST_SIM1 line 160 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (inert_intf_FAST_SIM1)
+Information: Building the design 'IR_math' instantiated from design 'MazeRunner' with
+	the parameters "12'h900". (HDL-193)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:22: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:23: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:24: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:26: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:27: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:28: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:31: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:33: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:36: signed to unsigned assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:38: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv:43: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (IR_math_900)
+Information: Building the design 'sensor_intf' instantiated from design 'MazeRunner' with
+	the parameters "1,12'h900". (HDL-193)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:158: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:159: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:164: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:168: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:175: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv:181: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 195 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           208            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 319 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           329            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 92 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       tmr_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 99 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     vbatt4_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt4_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     vbatt1_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt1_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     vbatt2_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt2_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     vbatt3_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     vbatt3_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 121 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     cntr_IR_reg     | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 128 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rght_IR_prev3_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rght_IR_reg     | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rght_IR_prev1_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rght_IR_prev2_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 142 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  lft_IR_prev3_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     lft_IR_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  lft_IR_prev1_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  lft_IR_prev2_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 180 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     IR_Dtrm_reg     | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 189 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 274 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 280 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rght_accum_reg    | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 289 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 298 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rght_off_reg_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   lft_off_reg_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sensor_intf_1_900 line 313 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cal_state_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (sensor_intf_1_900)
+Information: Building the design 'piezo_drv' instantiated from design 'MazeRunner' with
+	the parameters "1". (HDL-193)
+
+Statistics for case statements in always block at line 31 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            36            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine piezo_drv_FAST_SIM1 line 12 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     dur_cnt_reg     | Flip-flop |  24   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine piezo_drv_FAST_SIM1 line 19 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    freq_cnt_reg     | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine piezo_drv_FAST_SIM1 line 172 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (piezo_drv_FAST_SIM1)
+Information: Building the design 'inertial_integrator' instantiated from design 'inert_intf_FAST_SIM1' with
+	the parameters "1". (HDL-193)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:112: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:168: unsigned to signed assignment occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:188: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:191: signed to unsigned conversion occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:205: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:207: signed to unsigned part selection occurs. (VER-318)
+Warning:  /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv:214: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 65 in file
+	'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            76            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 56 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 111 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    yaw_comp_reg     | Flip-flop |  19   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 127 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   yaw_scaled_reg    | Flip-flop |  19   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 137 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cntr_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 153 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     vld_ff1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     vld_ff2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 176 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_FAST_SIM1 line 195 in file
+		'/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_off_reg     | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (inertial_integrator_FAST_SIM1)
+Warning: Can't find port 'rst_n' in design 'MazeRunner'. (UID-95)
+Warning: Design rule attributes from the driving cell will be set on the port 'RST_n'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'INRT_MISO'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'INRT_INT'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'A2D_MISO'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'RX'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'hall_n'. (UID-401)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'MazeRunner'. (UIO-59)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2621                                   |
+| Number of User Hierarchies                              | 25                                     |
+| Sequential Cell Count                                   | 809                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 2                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 757                                    |
+| Number of Dont Touch Nets                               | 25                                     |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 121 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design MazeRunner has different process,
+voltage and temperatures parameters than the parameters at which target library 
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'piezo_drv_FAST_SIM1'
+  Processing 'PWM8'
+  Processing 'SPI_mnrch_0'
+  Processing 'A2D_intf'
+  Processing 'sensor_intf_1_900'
+  Processing 'PWM12_0'
+  Processing 'DutyScaleROM'
+  Processing 'MtrDrv'
+  Processing 'D_term'
+  Processing 'I_term'
+  Processing 'P_term'
+  Processing 'PID'
+  Processing 'IR_math_900'
+  Processing 'inertial_integrator_FAST_SIM1'
+  Processing 'inert_intf_FAST_SIM1'
+  Processing 'navigate_FAST_SIM1'
+  Processing 'maze_solve'
+  Processing 'cmd_proc'
+  Processing 'UART_rcv'
+  Processing 'UART_tx'
+  Processing 'UART'
+  Processing 'UART_wrapper'
+  Processing 'reset_synch'
+  Processing 'MazeRunner'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'piezo_drv_FAST_SIM1_DW01_add_0'
+  Processing 'piezo_drv_FAST_SIM1_DW01_add_1'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_0'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_1'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_2'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_3'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_4'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_5'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_6'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_7'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_8'
+  Processing 'piezo_drv_FAST_SIM1_DW01_cmp2_9'
+  Processing 'sensor_intf_1_900_DW01_cmp2_0_DW01_cmp2_10'
+  Processing 'sensor_intf_1_900_DW01_cmp2_1_DW01_cmp2_11'
+  Processing 'sensor_intf_1_900_DW01_cmp2_2_DW01_cmp2_12'
+  Processing 'sensor_intf_1_900_DW01_add_0_DW01_add_2'
+  Processing 'sensor_intf_1_900_DW01_add_1_DW01_add_3'
+  Processing 'sensor_intf_1_900_DW01_sub_0'
+  Processing 'sensor_intf_1_900_DW01_sub_1'
+  Processing 'sensor_intf_1_900_DW01_sub_2'
+  Processing 'sensor_intf_1_900_DW01_sub_3'
+  Processing 'sensor_intf_1_900_DW01_sub_4'
+  Processing 'sensor_intf_1_900_DW01_cmp2_3_DW01_cmp2_13'
+  Processing 'sensor_intf_1_900_DW01_inc_0_DW01_inc_4'
+  Processing 'PWM8_DW01_cmp2_0_DW01_cmp2_14'
+  Processing 'PWM8_DW01_inc_0_DW01_inc_5'
+  Processing 'SPI_mnrch_1_DW01_inc_0_DW01_inc_6'
+  Processing 'MtrDrv_DW01_sub_0_DW01_sub_5'
+  Processing 'MtrDrv_DW01_add_0_DW01_add_4'
+  Processing 'PWM12_1_DW01_inc_0_DW01_inc_7'
+  Processing 'PWM12_1_DW01_cmp2_0_DW01_cmp2_15'
+  Processing 'PWM12_1_DW01_cmp2_1_DW01_cmp2_16'
+  Processing 'PWM12_1_DW01_add_0_DW01_add_5'
+  Processing 'PWM12_1_DW01_cmp2_2_DW01_cmp2_17'
+  Processing 'PWM12_0_DW01_inc_0_DW01_inc_8'
+  Processing 'PWM12_0_DW01_cmp2_0_DW01_cmp2_18'
+  Processing 'PWM12_0_DW01_cmp2_1_DW01_cmp2_19'
+  Processing 'PWM12_0_DW01_add_0_DW01_add_6'
+  Processing 'PWM12_0_DW01_cmp2_2_DW01_cmp2_20'
+  Processing 'PID_DW01_cmp2_0_DW01_cmp2_21'
+  Processing 'PID_DW01_cmp2_1_DW01_cmp2_22'
+  Processing 'PID_DW01_sub_0_DW01_sub_6'
+  Processing 'PID_DW01_add_0_DW01_add_7'
+  Processing 'PID_DW01_sub_1_DW01_sub_7'
+  Processing 'D_term_DW01_sub_0_DW01_sub_8'
+  Processing 'I_term_DW01_add_0_DW01_add_8'
+  Processing 'IR_math_900_DW01_add_0_DW01_add_9'
+  Processing 'IR_math_900_DW01_add_1_DW01_add_10'
+  Processing 'IR_math_900_DW01_sub_0_DW01_sub_9'
+  Processing 'IR_math_900_DW01_sub_1_DW01_sub_10'
+  Processing 'IR_math_900_DW01_sub_2_DW01_sub_11'
+  Processing 'inert_intf_FAST_SIM1_DW01_inc_0_DW01_inc_9'
+  Processing 'inertial_integrator_FAST_SIM1_DW01_inc_0_DW01_inc_10'
+  Processing 'inertial_integrator_FAST_SIM1_DW01_sub_0_DW01_sub_12'
+  Processing 'SPI_mnrch_0_DW01_inc_0_DW01_inc_11'
+  Processing 'navigate_FAST_SIM1_DW01_cmp2_0_DW01_cmp2_23'
+  Processing 'navigate_FAST_SIM1_DW01_sub_0_DW01_sub_13'
+  Processing 'navigate_FAST_SIM1_DW01_sub_1_DW01_sub_14'
+  Processing 'navigate_FAST_SIM1_DW01_cmp2_1_DW01_cmp2_24'
+  Processing 'navigate_FAST_SIM1_DW01_cmp2_2_DW01_cmp2_25'
+  Processing 'navigate_FAST_SIM1_DW01_add_0_DW01_add_11'
+  Processing 'navigate_FAST_SIM1_DW01_cmp2_3_DW01_cmp2_26'
+  Processing 'navigate_FAST_SIM1_DW01_cmp2_4_DW01_cmp2_27'
+  Processing 'UART_rcv_DW01_dec_0'
+  Processing 'UART_tx_DW01_dec_0_DW01_dec_1'
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_add_width14' (rpl)
+  Processing 'DW01_add_width14'
+  Building model 'DW01_add_width14' (cla)
+  Processing 'DW01_add_width14'
+  Building model 'DW01_add_width13' (rpl)
+  Processing 'DW01_add_width13'
+  Building model 'DW01_add_width13' (cla)
+  Processing 'DW01_add_width13'
+  Allocating blocks in 'DW02_mult_A_width13_B_width12'
+  Building model 'DW01_MUX'
+  Processing 'DW01_MUX'
+  Building model 'DW01_mmux_width2'
+  Processing 'DW01_mmux_width2'
+  Building model 'DW01_mmux_width3'
+  Processing 'DW01_mmux_width3'
+  Building model 'DW01_mmux_width4'
+  Processing 'DW01_mmux_width4'
+  Building model 'DW01_mmux_width5'
+  Processing 'DW01_mmux_width5'
+  Building model 'DW01_add_width23' (cla)
+  Processing 'DW01_add_width23'
+  Building model 'DW02_mult_A_width13_B_width12' (csa)
+  Processing 'DW02_mult_A_width13_B_width12'
+  Building model 'DW01_add_width15' (rpl)
+  Processing 'DW01_add_width15'
+  Building model 'DW01_add_width15' (cla)
+  Processing 'DW01_add_width15'
+  Building model 'DW01_sub_width12' (rpl)
+  Processing 'DW01_sub_width12'
+  Building model 'DW01_sub_width12' (cla)
+  Processing 'DW01_sub_width12'
+  Building model 'DW01_add_width12' (rpl)
+  Processing 'DW01_add_width12'
+  Building model 'DW01_add_width12' (cla)
+  Processing 'DW01_add_width12'
+  Building model 'DW01_sub_width19' (rpl)
+  Processing 'DW01_sub_width19'
+  Building model 'DW01_sub_width19' (cla)
+  Processing 'DW01_sub_width19'
+  Building model 'DW01_add_width19' (rpl)
+  Processing 'DW01_add_width19'
+  Building model 'DW01_add_width19' (cla)
+  Processing 'DW01_add_width19'
+  Building model 'DW01_add_width27' (rpl)
+  Processing 'DW01_add_width27'
+  Building model 'DW01_add_width27' (cla)
+  Processing 'DW01_add_width27'
+  Allocating blocks in 'DW02_mult_A_width8_B_width5'
+  Building model 'DW01_add_width11' (cla)
+  Processing 'DW01_add_width11'
+  Building model 'DW02_mult_A_width8_B_width5' (csa)
+  Processing 'DW02_mult_A_width8_B_width5'
+  Allocating blocks in 'DW02_mult_A_width5_B_width8'
+  Building model 'DW02_mult_A_width5_B_width8' (csa)
+  Processing 'DW02_mult_A_width5_B_width8'
+  Allocating blocks in 'DW02_mult_A_width3_B_width10'
+  Allocating blocks in 'DW01_absval_width3'
+  Building model 'DW01_inc_width3' (cla)
+  Processing 'DW01_inc_width3'
+  Building model 'DW01_absval_width3' (cla)
+  Processing 'DW01_absval_width3'
+  Allocating blocks in 'DW01_absval_width10'
+  Building model 'DW01_inc_width10' (cla)
+  Processing 'DW01_inc_width10'
+  Building model 'DW01_absval_width10' (cla)
+  Processing 'DW01_absval_width10'
+  Building model 'DW01_inc_width13' (cla)
+  Processing 'DW01_inc_width13'
+  Building model 'DW02_mult_A_width3_B_width10' (csa)
+  Processing 'DW02_mult_A_width3_B_width10'
+  Allocating blocks in 'DW02_mult_A_width10_B_width3'
+  Building model 'DW02_mult_A_width10_B_width3' (csa)
+  Processing 'DW02_mult_A_width10_B_width3'
+  Allocating blocks in 'DW02_mult_A_width10_B_width1'
+  Allocating blocks in 'DW01_absval_width1'
+  Building model 'DW01_inc_width1' (cla)
+  Processing 'DW01_inc_width1'
+  Building model 'DW01_absval_width1' (cla)
+  Processing 'DW01_absval_width1'
+  Building model 'DW01_inc_width11' (cla)
+  Processing 'DW01_inc_width11'
+  Building model 'DW02_mult_A_width10_B_width1' (csa)
+  Processing 'DW02_mult_A_width10_B_width1'
+  Allocating blocks in 'DW02_mult_A_width1_B_width10'
+  Building model 'DW02_mult_A_width1_B_width10' (csa)
+  Processing 'DW02_mult_A_width1_B_width10'
+  Processing 'sensor_intf_1_900_DW01_add_2_DW01_add_12'
+  Processing 'sensor_intf_1_900_DW01_add_3_DW01_add_13'
+  Processing 'sensor_intf_1_900_DW01_add_4_DW01_add_14'
+  Processing 'MtrDrv_DW02_mult_0'
+  Processing 'MtrDrv_DW01_add_1_DW01_add_15'
+  Processing 'MtrDrv_DW02_mult_1'
+  Processing 'MtrDrv_DW01_add_2_DW01_add_16'
+  Processing 'PID_DW01_add_1_DW01_add_17'
+  Processing 'PID_DW01_add_2_DW01_add_18'
+  Processing 'sensor_intf_1_900_DW01_sub_5_DW01_sub_15'
+  Processing 'sensor_intf_1_900_DW01_add_5_DW01_add_19'
+  Processing 'inertial_integrator_FAST_SIM1_DW01_add_0_DW01_add_20'
+  Processing 'inertial_integrator_FAST_SIM1_DW01_sub_1_DW01_sub_16'
+  Processing 'inertial_integrator_FAST_SIM1_DW01_add_1_DW01_add_21'
+  Processing 'inertial_integrator_FAST_SIM1_DW01_add_2_DW01_add_22'
+  Processing 'D_term_DW02_mult_0_DW02_mult_2'
+  Processing 'D_term_DW01_add_0_DW01_add_23'
+  Processing 'P_term_DW02_mult_0_DW02_mult_3'
+  Processing 'P_term_DW01_absval_0_DW01_absval_3'
+  Processing 'P_term_DW01_inc_0_DW01_inc_14'
+  Processing 'P_term_DW01_add_0_DW01_add_24'
+  Processing 'P_term_DW01_inc_1_DW01_inc_15'
+  Processing 'IR_math_900_DW02_mult_0_DW02_mult_4'
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+Information: The register 'iCNTRL/D/D_term_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNEMO/iINT/yaw_int_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNEMO/iINT/yaw_int_reg[0]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11   16996.4      0.00       0.0     308.1                          
+    0:00:11   16996.4      0.00       0.0     308.1                          
+    0:00:11   16996.4      0.00       0.0     308.1                          
+    0:00:11   16996.4      0.00       0.0     308.1                          
+    0:00:11   16996.4      0.00       0.0     308.1                          
+    0:00:12   15419.2      0.00       0.0     100.8                          
+    0:00:12   15346.7      0.00       0.0     100.8                          
+    0:00:12   15344.2      0.00       0.0     100.8                          
+    0:00:12   15344.2      0.00       0.0     100.8                          
+    0:00:12   15344.2      0.00       0.0     100.8                          
+    0:00:12   15309.6      0.00       0.0     100.8                          
+    0:00:12   15309.6      0.00       0.0     100.8                          
+    0:00:12   15314.2      0.00       0.0      46.2                          
+    0:00:12   15315.7      0.00       0.0       0.2                          
+    0:00:12   15315.7      0.00       0.0       0.2                          
+    0:00:12   15315.7      0.00       0.0       0.2                          
+    0:00:12   15315.7      0.00       0.0       0.2                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   15315.7      0.00       0.0       0.2                          
+    0:00:12   15315.7      0.00       0.0       0.2                          
+    0:00:13   15275.1      0.00       0.0       0.2                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13   15275.1      0.00       0.0       0.2                          
+    0:00:13   15281.4      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13   15281.4      0.00       0.0       0.0                          
+    0:00:13   15281.4      0.00       0.0       0.0                          
+    0:00:13   15163.8      0.00       0.0       0.9                          
+    0:00:13   15100.0      0.00       0.0       0.9                          
+    0:00:13   15077.1      0.00       0.0       0.9                          
+    0:00:13   15066.2      0.00       0.0       0.9                          
+    0:00:13   15061.1      0.00       0.0       0.9                          
+    0:00:13   15061.1      0.00       0.0       0.9                          
+    0:00:13   15061.1      0.00       0.0       0.5                          
+    0:00:13   15051.9      0.00       0.0       0.5                          
+    0:00:13   15051.9      0.00       0.0       0.5                          
+    0:00:13   15051.9      0.00       0.0       0.5                          
+    0:00:13   15051.9      0.00       0.0       0.5                          
+    0:00:13   15051.9      0.00       0.0       0.5                          
+    0:00:13   15051.9      0.00       0.0       0.5                          
+    0:00:13   15046.8      0.00       0.0       0.5                          
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating graph... (UID-83)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 4326                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 806                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 2                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 98 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design MazeRunner has different process,
+voltage and temperatures parameters than the parameters at which target library 
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'MazeRunner'
+Information: The register 'iWRAP/uart/iTX/tx_done_reg' will be removed. (OPT-1207)
+Information: The register 'iIR/tmr_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iIR/tmr_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iIR/tmr_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iIR/tmr_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iIR/tmr_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iWRAP/upperbyte_reg[4]' will be removed. (OPT-1207)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+Information: The register 'iNEMO/iINT/yaw_off_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNEMO/iINT/yaw_off_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNAV/frwrd_spd_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNAV/frwrd_spd_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNAV/frwrd_spd_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iNAV/frwrd_spd_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iWRAP/uart/iTX/shift_reg_reg[8]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:03   15731.0      0.00       0.0     300.8                                0.00  
+    0:00:03   15731.0      0.00       0.0     300.8                                0.00  
+    0:00:03   15731.0      0.00       0.0     300.8                                0.00  
+    0:00:03   15731.0      0.00       0.0     300.8                                0.00  
+    0:00:03   15731.0      0.00       0.0     300.8                                0.00  
+    0:00:03   14753.6      0.00       0.0      60.1                                0.00  
+    0:00:03   14741.9      0.00       0.0      60.9                                0.00  
+    0:00:04   14741.9      0.00       0.0      60.9                                0.00  
+    0:00:04   14741.9      0.00       0.0      60.9                                0.00  
+    0:00:04   14741.9      0.00       0.0      60.9                                0.00  
+    0:00:04   14741.9      0.00       0.0      60.9                                0.00  
+    0:00:04   14750.5      0.00       0.0      37.4                                0.00  
+    0:00:04   14750.5      0.00       0.0       1.4                                0.00  
+    0:00:04   14750.5      0.00       0.0       1.4                                0.00  
+    0:00:04   14750.5      0.00       0.0       1.4                                0.00  
+    0:00:04   14750.5      0.00       0.0       1.4                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   14750.5      0.00       0.0       1.4                                0.00  
+    0:00:04   14750.5      0.00       0.0       1.4                                0.00  
+    0:00:04   14283.1      0.00       0.0     329.5                                0.00  
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   14283.1      0.00       0.0     329.5                               -1.44  
+    0:00:04   14345.7      0.00       0.0      59.4 n391                          -1.44  
+    0:00:04   14354.6      0.00       0.0       0.6 n783                          -1.44  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:05   14354.6      0.00       0.0       0.6                               -1.44  
+    0:00:05   14354.6      0.00       0.0       0.6                               -1.44  
+    0:00:05   14266.6      0.00       0.0       0.6                               -1.44  
+    0:00:05   14220.1      0.00       0.0       0.6                               -1.44  
+    0:00:05   14185.8      0.00       0.0       0.7                               -1.44  
+    0:00:05   14179.2      0.00       0.0       0.7                               -1.44  
+    0:00:05   14174.1      0.00       0.0       0.6                               -1.44  
+    0:00:05   14174.1      0.00       0.0       0.6                               -1.44  
+    0:00:05   14174.1      0.00       0.0       0.6                               -1.44  
+    0:00:05   14173.9      0.00       0.0       0.6                               -1.44  
+    0:00:05   14173.9      0.00       0.0       0.6                               -1.44  
+    0:00:05   14173.9      0.00       0.0       0.6                               -1.44  
+    0:00:05   14173.9      0.00       0.0       0.6                               -1.44  
+    0:00:05   14173.9      0.00       0.0       0.6                               -1.44  
+    0:00:05   14173.9      0.00       0.0       0.6                               -1.44  
+    0:00:05   14263.8      0.00       0.0       0.6 iMTR/rght_spd_ff_reg[3]/D     -0.50  
+    0:00:06   14298.6      0.00       0.0       0.6                                0.00  
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
