@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : MazeRunner
 Version: U-2022.12-SP4
-Date   : Mon Dec 11 22:07:53 2023
+Date   : Tue Dec 12 20:23:28 2023
 ****************************************
 
 Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
@@ -30,11 +30,11 @@ Wire Load Model Mode: enclosed
   iNAV/frwrd_spd_reg[3]/CLK (DFFARX1_LVT)                               0.00       0.00 r
   iNAV/frwrd_spd_reg[3]/QN (DFFARX1_LVT)                                0.07       0.07 f
   U2925/Y (INVX2_LVT)                                                   0.06       0.12 r
-  U2747/Y (AO21X1_LVT)                                                  0.05       0.17 r
-  U2746/Y (AO21X1_LVT)                                                  0.05       0.23 r
-  U2744/Y (AO21X1_LVT)                                                  0.08       0.31 r
-  U3046/Y (INVX0_LVT)                                                   0.04       0.35 f
-  U3634/Y (INVX1_LVT)                                                   0.06       0.41 r
+  U2151/Y (AO21X1_LVT)                                                  0.05       0.17 r
+  U2150/Y (AO21X1_LVT)                                                  0.05       0.23 r
+  U2149/Y (AO21X1_LVT)                                                  0.08       0.31 r
+  U3048/Y (INVX0_LVT)                                                   0.04       0.35 f
+  U3635/Y (INVX1_LVT)                                                   0.06       0.41 r
   U1317/Y (AND2X1_LVT)                                                  0.06       0.47 r
   U1316/Y (AND2X1_LVT)                                                  0.04       0.51 r
   iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_5/CO (FADDX1_LVT)       0.08       0.59 r

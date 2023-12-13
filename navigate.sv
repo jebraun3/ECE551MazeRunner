@@ -72,74 +72,75 @@ module navigate(clk,rst_n,strt_hdng,strt_mv,stp_lft,stp_rght,mv_cmplt,hdng_rdy,m
   endgenerate
   state_t state, nxt_state;
   always_comb begin 
-  mv_cmplt = 0;
-  moving = 0;
-  dec_frwrd = 0;
-  dec_frwrd_fast = 0;
-  inc_frwrd = 0;
-  init_frwrd = 0;
-  nxt_state = state;
-  case(state) 
-  IDLE:  begin
-         if(strt_hdng) begin
-         nxt_state = HEADING;
-		 end
-		 if(strt_mv) begin
-		 init_frwrd = 1;
-		 nxt_state = ACCELERATE;
-		 end
-		 end
-  HEADING:  begin
-            if(at_hdng_rise) begin
-            mv_cmplt = 1;
-			nxt_state = IDLE;
-			end 
-			else begin
-			moving = 1;
-			end
-			end
-  ACCELERATE: begin
-             inc_frwrd = 1;
-             moving = 1;
-             if(!frwrd_opn) begin
-			 nxt_state = FASTSTOP;
-			 end
-			 else if((lft_opn_rise && stp_lft) || (rght_opn_rise && stp_rght)) begin 
-			 nxt_state = STOP;
-			 end
-			 
-			 end
-   STOP:   begin 
-           if(frwrd_spd == 0)begin
-			mv_cmplt = 1;
-			nxt_state = IDLE;
-			end
-			else begin
-			dec_frwrd = 1;
-			moving = 1;
-			end
-			end
-   FASTSTOP: begin 
-            if(frwrd_spd == 0)begin
-			mv_cmplt = 1;
-			nxt_state = IDLE;
-			end
-			else begin
-			dec_frwrd_fast = 1;
-			moving = 1;
-			end
-			end
-   default: nxt_state = FASTSTOP; //stop immediately in case undefined state
-   endcase
+    mv_cmplt = 0;
+    moving = 0;
+    dec_frwrd = 0;
+    dec_frwrd_fast = 0;
+    inc_frwrd = 0;
+    init_frwrd = 0;
+    nxt_state = state;
+    case(state) 
+      IDLE: begin
+              if(strt_hdng) begin
+                nxt_state = HEADING;
+              end
+              if(strt_mv) begin
+                init_frwrd = 1;
+                nxt_state = ACCELERATE;
+              end
+            end
+      
+      HEADING:  begin
+                  if(at_hdng_rise) begin
+                    mv_cmplt = 1;
+                    nxt_state = IDLE;
+                  end 
+                  else begin
+                    moving = 1;
+                  end
+                end
+      
+      ACCELERATE: begin
+                    inc_frwrd = 1;
+                    moving = 1;
+                    if(!frwrd_opn) begin
+                      nxt_state = FASTSTOP;
+                    end
+                    else if((lft_opn_rise && stp_lft) || (rght_opn_rise && stp_rght)) begin 
+                      nxt_state = STOP;
+                    end
+                  end
+      STOP:   begin 
+                if(frwrd_spd == 0)begin
+                  mv_cmplt = 1;
+                  nxt_state = IDLE;
+                end
+                else begin
+                  dec_frwrd = 1;
+                  moving = 1;
+                end
+              end
+      
+      FASTSTOP: begin 
+                  if(frwrd_spd == 0)begin
+                    mv_cmplt = 1;
+                    nxt_state = IDLE;
+                  end
+                  else begin
+                    dec_frwrd_fast = 1;
+                    moving = 1;
+                  end
+                end
+      default: nxt_state = FASTSTOP; //stop immediately in case undefined state
+    endcase
    end
    
    always_ff @(posedge clk,negedge rst_n) begin
-   if(!rst_n)
-   state <= IDLE;
-   else
-   state <= nxt_state;
+    if(!rst_n)
+      state <= IDLE;
+    else
+      state <= nxt_state;
    end
    
    
     endmodule
-  

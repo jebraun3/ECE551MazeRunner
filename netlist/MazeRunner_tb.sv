@@ -101,7 +101,7 @@ module MazeRunner_tb();
     send_cmd = 1;
     @(negedge clk);
     send_cmd = 0;
-    @(posedge resp_rdy);
+   
     //do self check
     fork 
       begin : timeout2
@@ -118,8 +118,8 @@ module MazeRunner_tb();
           $display("unexpected response");
           $stop();
         end
-        if (iPHYS.heading_robot[19:12] !== 6'h3F]) begin
-          $display("heading not similat to requested heading");
+        if (iPHYS.heading_robot[19:12] !== 8'h3F) begin
+          $display("heading not similar to requested heading");
           $stop();
         end
         $display("change heading done");

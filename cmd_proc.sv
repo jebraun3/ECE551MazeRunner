@@ -47,6 +47,8 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
  
  //state machine
 	always_comb begin
+    new_stp_lft = cmd[1];
+		new_stp_rght = cmd[0];
 		nxt_state = state;
 		change_dsrd_hdng = 0;
 		strt_hdng = 0;
@@ -74,8 +76,7 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
 								else if(cmd[15:13] === 3'b010) begin
 									strt_mv = 1;
 									change_stp = 1;
-									new_stp_lft = cmd[1];
-									new_stp_rght = cmd[0];
+									
 									nxt_state = WAIT_MV;
 								end
 								else if(cmd[15:13] === 3'b011) begin

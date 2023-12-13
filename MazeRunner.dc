@@ -20,6 +20,10 @@ set_load 0.1 [all_outputs]
 
 set_max_transition 0.125 [current_design]
 
+
+#set max area to zero lol!
+#set_max_area 0
+
 set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
 
 #compile

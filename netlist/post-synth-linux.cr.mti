@@ -35,6 +35,13 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	RunnerPhysics
 
+} {} {}} /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module ADC128S_FC
+
+Top level modules:
+	ADC128S_FC
+
 } {} {}} /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/UART_rcv.sv
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 -- Compiling module UART_rcv
@@ -42,12 +49,12 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	UART_rcv
 
-} {} {}} /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/ADC128S_FC.sv
+} {} {}} /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg {1 {vlog -work work -vopt -stats=none /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module ADC128S_FC
+-- Compiling module MazeRunner
 
 Top level modules:
-	ADC128S_FC
+	MazeRunner
 
 } {} {}} /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/SPI_iNEMO4.sv
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
@@ -62,12 +69,5 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 
 Top level modules:
 	UART_tx
-
-} {} {}} /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg {1 {vlog -work work -vopt -stats=none /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/netlist/MazeRunner.vg
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module MazeRunner
-
-Top level modules:
-	MazeRunner
 
 } {} {}}

@@ -1,0 +1,78 @@
+GNU gdb (Debian 10.1-1.7) 10.1.90.20210103-git
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+Attaching to process 4068722
+[New LWP 4068760]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x0000155550012747 in __GI___wait4 (pid=4069412, 
+    stat_loc=stat_loc@entry=0x7fffffffaa58, options=options@entry=0, 
+    usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:27
+(gdb) (gdb) 
+Thread 2 (Thread 0x15554a9f1700 (LWP 4068760) "common_shell_ex"):
+#0  0x000015555003ce23 in __GI___select (nfds=0, readfds=0x0, writefds=0x0, exceptfds=0x0, timeout=0x15554a9c3910) at ../sysdeps/unix/sysv/linux/select.c:41
+#1  0x0000000011970c06 in SNPSee_554ec7c90557bab679d871cd58526530 ()
+#2  0x0000000013909539 in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x0000155552316ea7 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#4  0x0000155550046a2f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 1 (Thread 0x15554aa59bc0 (LWP 4068722) "common_shell_ex"):
+#0  0x0000155550012747 in __GI___wait4 (pid=4069412, stat_loc=stat_loc@entry=0x7fffffffaa58, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x00001555500126c7 in __GI___waitpid (pid=<optimized out>, stat_loc=stat_loc@entry=0x7fffffffaa58, options=options@entry=0) at waitpid.c:38
+#2  0x000015554ff90aa7 in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:172
+#3  0x000000001393f6cd in SNPSee_4f1eca636f186904 ()
+#4  0x000000001390b613 in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c735317487fd2aa296d8a7317 ()
+#5  0x000000001390d003 in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c73531748e1eb9162e9fd7182 ()
+#6  0x0000000000cdc45a in SNPSee_f1ee00d2049be34bc9fa2aabd0709c661b77ea09a2cd7785 ()
+#7  0x000000000d0e69a1 in SNPSee_b0111077a1564ec2f03c23d0bb102089cced107fffe7abc9 ()
+#8  0x000000000d0e730a in SNPSee_616b6e047c741ff1baf571efe85d3536eac68d027a1be0e0030a066449e92897 ()
+#9  0x000000000d0e6e0d in SNPSee_b5b74bb29e23928e271a046254d5c62e ()
+#10 0x000000001202c5df in SNPSee_3da1e8e388eef22c4cad96049bb507e323902e731626b6f85a1de23e01dcfb84 ()
+#11 0x0000155552322140 in <signal handler called> () at /lib/x86_64-linux-gnu/libpthread.so.0
+#12 0x0000000012553937 in SNPSee_67a3c4287c7d55d3b78796b03ad9b6eaed0546bde44488e8 ()
+#13 0x000000000d10875a in SNPSee_3133c6c5b99be47c0fc899886b07159f ()
+#14 0x00000000048fc97f in SNPSee_a03cc2bd4282768f0cc06c5a3fea29439057b65e965fc12464646005360f933d ()
+#15 0x00000000048fcff6 in SNPSee_a03cc2bd4282768f95c38fbb070c88a774b3586d138c3968 ()
+#16 0x000000000309c31d in SNPSee_e62e1698d01baea2f0ae7e2593b52a11 ()
+#17 0x00000000032f17ec in SNPSee_800cfa09c4312a2a658022cd459e34616900e8f99890a5ed ()
+#18 0x0000000012a9b245 in SNPSee_7ea007f17721baa8c52712154029f5e48c5b42d17487296853bec6f509fb5cd7fb8e3aecaf9a59df5ceaf3227abcdf276664c5bfd5ca6b006d34e6f6d0022bb5aa6a0546020548c042f868058edbb564 ()
+#19 0x00000000123651d0 in SNPSee_18ae1188a5a6482452f3b67abbc891010269f13ce0e30d67 ()
+#20 0x00000000139ea49c in SNPSee_57415c5b07ec5e8b8118f96e6212a2c42c69fd3f49376c0d ()
+#21 0x00000000139ef617 in SNPSee_1ac40924fdff8310f5184d6eb67c5798036a89169a27d790 ()
+#22 0x00000000139f148f in SNPSee_a00aeeb47fd325df3eff4946e57739a1 ()
+#23 0x0000000012382976 in SNPSee_5b9e0c983f97901fa4e0af164abe7efeb24c5f4c6136879c869b2b88ca4e26329cbb10d1a609855d ()
+#24 0x000000001233f39c in SNPSee_59511b0144537c36c6614840eb25b067 ()
+#25 0x0000000012350f3f in SNPSee_dfcfd18c870f576645dec230cc55940481eea9a4962927b3b2419a5f9f3803d6e6d6151e8a6657b75c63db485ae230e97b8a0dd27c2cdfedd6e7ab8b3504080f ()
+#26 0x00000000123651d0 in SNPSee_18ae1188a5a6482452f3b67abbc891010269f13ce0e30d67 ()
+#27 0x00000000139ea49c in SNPSee_57415c5b07ec5e8b8118f96e6212a2c42c69fd3f49376c0d ()
+#28 0x00000000139ef617 in SNPSee_1ac40924fdff8310f5184d6eb67c5798036a89169a27d790 ()
+#29 0x0000000013a8fa14 in SNPSee_e90acbbdf8c656c898db7186881c4c18f0a07e70af506669 ()
+#30 0x0000000012360642 in SNPSee_eb883b8643ac3618e46fbd7d90d84cd1d9cf41f1ea1de2433ad64196cf3fcc2ce0cf4135a98ecf06 ()
+#31 0x00000000024dcedd in SNPSee_bf47f8c354012225294e8116109cb5d025f4ccb7f287ad59c2366d27ef082a7abe934ab21f6bb090d48f7368a4129526962b5f385b08867de66d0440d3888337d8208e9ee5c4c9cb ()
+#32 0x00000000024d62fb in SNPSee_848f53926cc7d21a0b1a0e3cec9d3ef03d79fae4f741b2beb1d9e61bc8469679467712e699595aba26463d97eba60e22e02b598c8b482ec2d9046bfa95f0f185 ()
+#33 0x00000000026e8b20 in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24d09b1487aa013d26f835ff7ccd94ffb63758abf28604ccf68 ()
+#34 0x00000000026ea23f in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24ddc44ac444ffd24dab81817742939461558b86efc9882e060f5cf6799b4197ba760a948a9120b34f41acf4fa4287f35e8 ()
+#35 0x00000000026ea742 in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24d198741dbd99eb01272a55ba76ee2abd7563348609c8b2952ab7d3e71c5dc81c718aa12a98dfae9b5630d0c2fda34916be6c498847f4129e9a5f1fbcdd8c6a901 ()
+#36 0x00000000026eacde in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24d0b90ac4a4483f6665465d7c37ec4ce71313cfc0a471575a79ba413633ac1537032eb8775f5ebb55f6021eb7118e1e33a66a40a742570a303b3cdb1e9fad8ae33 ()
+#37 0x00000000026820d6 in SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf ()
+#38 0x000000000242044d in SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c ()
+#39 0x0000000002e6089f in SNPSee_76d6cca1ef29382ca84b036280d53dca ()
+#40 0x0000000000ce0d86 in SNPSee_a8c67c391924da59bb0a6e836c77e2d8 ()
+#41 0x0000000000bf2af9 in SNPSee_5a24f30b88271223 ()
+#42 0x000015554ff6ed0a in __libc_start_main (main=0xbf2af0 <SNPSee_5a24f30b88271223>, argc=5, argv=0x7fffffffe2e8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffe2d8) at ../csu/libc-start.c:308
+#43 0x0000000000cda30e in SNPSee_d06eed713327be76 ()
+(gdb) Detaching from program: /cae/apps/data/synopsys-2023/syn/U-2022.12-SP4/linux64/syn/bin/common_shell_exec, process 4068722
+[Inferior 1 (process 4068722) detached]
+(gdb) 
