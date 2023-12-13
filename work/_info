@@ -1,65 +1,69 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt
 Z1 !s99 nomlopt
-Z2 !s12c _opt
+R0
 R1
-R2
+Z2 !s12c _opt1
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
+R1
+R0
 R1
 R0
 R1
 R2
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
+R1
+R0
 R1
 !s11f MIXED_VERSIONS
 13
@@ -70,10 +74,10 @@ R1
 cModel Technology
 Z3 dC:/intelFPGA_lite/22.1std
 T_opt
-!s110 1702441085
-V4zV:^OG<zPP?@UeOL_k>P2
+!s110 1702485241
+VlT4H?9DT[G7oA3eORd1HA3
 Z4 04 13 4 work MazeRunner_tb fast 0
-=25-000ae431a4f1-6579307d-796ab-3eb1fc
+=1-000ae431a4f1-6579dcf9-232e-244813
 R1
 Z5 !s12b OEM100
 Z6 !s124 OEM100
@@ -94,10 +98,11 @@ o-quiet -auto_acc_if_foreign -work work
 R7
 n@_opt1
 R8
+R3
 vA2D_intf
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv
 Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z10 !s110 1702482634
+Z10 !s110 1702485416
 !i10b 1
 !s100 AbFW0bWRLhb^5=gWoLRAN3
 I`@Qb`UW==o^bk9WbBHUY23
@@ -106,14 +111,14 @@ Z11 d/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner
 w1702327269
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv
-!i122 1173
+!i122 1335
 L0 1 85
 Z12 VDg1SIo80bB@j0V0VzS_@n1
 Z13 OE;L;2023.2_1;77
 r1
 !s85 0
 31
-Z14 !s108 1702482634.000000
+Z14 !s108 1702485416.000000
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/A2D_intf.sv|
 !i113 0
@@ -133,7 +138,7 @@ R11
 Z17 w1702327185
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/ADC128S_FC.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/ADC128S_FC.sv
-!i122 1174
+!i122 1336
 L0 1 111
 R12
 R13
@@ -160,7 +165,7 @@ R11
 w1702479580
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/cmd_proc.sv
-!i122 1175
+!i122 1337
 Z18 L0 1 116
 R12
 R13
@@ -177,7 +182,7 @@ R7
 vD_term
 Z19 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv
 R9
-Z20 !s110 1702482635
+Z20 !s110 1702485417
 !i10b 1
 !s100 cF=Wo4hU:o3XkbYPXLF:31
 IU=>nQGa02A9z]7j?83?952
@@ -186,14 +191,14 @@ R11
 Z21 w1702427571
 Z22 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv
 Z23 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv
-!i122 1184
+!i122 1346
 L0 41 39
 R12
 R13
 r1
 !s85 0
 31
-Z24 !s108 1702482635.000000
+Z24 !s108 1702485417.000000
 Z25 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv|
 Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PID.sv|
 !i113 0
@@ -213,7 +218,7 @@ R11
 R17
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/DutyScaleROM.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/DutyScaleROM.sv
-!i122 1176
+!i122 1338
 L0 1 81
 R12
 R13
@@ -240,7 +245,7 @@ R11
 R21
 R22
 R23
-!i122 1184
+!i122 1346
 L0 3 35
 R12
 R13
@@ -267,7 +272,7 @@ R11
 w1702479658
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inert_intf.sv
-!i122 1177
+!i122 1339
 L0 7 163
 R12
 R13
@@ -284,7 +289,7 @@ R7
 vinertial_integrator
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv
 R9
-R10
+R20
 !i10b 1
 !s100 zFCz=?KO7bL<jUEdR_Y6D0
 IKOKTfVMY<WG3TMB37i58Q1
@@ -293,7 +298,7 @@ R11
 Z27 w1702327186
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/inertial_integrator.sv
-!i122 1178
+!i122 1340
 L0 1 216
 R12
 R13
@@ -310,25 +315,25 @@ R7
 vinverse_PWM12e
 Z28 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv
 R9
-R20
+Z29 !s110 1702485418
 !i10b 1
 !s100 [RcoJDa?7llLWiCA6Y18G0
 I3B0<_nIKg6A@_Vl9OVmUW0
 S1
 R11
-Z29 w1702441074
-Z30 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv
-Z31 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv
-!i122 1190
+Z30 w1702441074
+Z31 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv
+Z32 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv
+!i122 1352
 L0 363 49
 R12
 R13
 r1
 !s85 0
 31
-R24
-Z32 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv|
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv|
+Z33 !s108 1702485418.000000
+Z34 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv|
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RunnerPhysics.sv|
 !i113 0
 R15
 R16
@@ -337,7 +342,7 @@ ninverse_@p@w@m12e
 vIR_math
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv
 R9
-R10
+R20
 !i10b 1
 !s100 j`8UeBW?FBFME8^JESZef2
 I2[7?bN6Va_YOACf:9:IB13
@@ -346,14 +351,14 @@ R11
 w1702426557
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv
-!i122 1179
+!i122 1341
 L0 1 48
 R12
 R13
 r1
 !s85 0
 31
-R14
+R24
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/IR_Math.sv|
 !i113 0
@@ -364,7 +369,7 @@ n@i@r_math
 vmaze_solve
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv
 R9
-R10
+R20
 !i10b 1
 !s100 O6Lc`3P;4E@92Ab[QCMRD1
 I2dTi;c8Ga9o9k5SlGMRAM3
@@ -373,14 +378,14 @@ R11
 w1702479874
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv
-!i122 1180
+!i122 1342
 L0 1 105
 R12
 R13
 r1
 !s85 0
 31
-R14
+R24
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/maze_solve.sv|
 !i113 0
@@ -399,14 +404,14 @@ R11
 w1702426606
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv
-!i122 1181
+!i122 1343
 L0 1 162
 R12
 R13
 r1
 !s85 0
 31
-R14
+R24
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner.sv|
 !i113 0
@@ -419,15 +424,15 @@ vMazeRunner_tb
 R9
 R20
 !i10b 1
-!s100 >W@AVF^@W=hV]l>U^X9e21
-I?Hl?]hzhJI>5Ne>W0`<910
+!s100 8LXeW]P>e7106;oQNL5293
+I255<:aDS;mNGU6oIH[jYe1
 S1
 R11
-w1702441166
+w1702485169
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner_tb.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MazeRunner_tb.sv
-!i122 1182
-L0 1 275
+!i122 1344
+L0 1 277
 R12
 R13
 r1
@@ -453,7 +458,7 @@ R11
 w1702426996
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/MtrDrv.sv
-!i122 1183
+!i122 1345
 L0 1 62
 R12
 R13
@@ -471,7 +476,7 @@ n@mtr@drv
 vnavigate
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.sv
 R9
-Z34 !s110 1702482636
+R29
 !i10b 1
 !s100 k]Pa3c;ZcTakoWXnMFj0`1
 IoS;FIaFB@3jSFcAoVA^930
@@ -480,14 +485,14 @@ R11
 w1702479956
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.sv
-!i122 1199
+!i122 1361
 L0 1 147
 R12
 R13
 r1
 !s85 0
 31
-Z35 !s108 1702482636.000000
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/navigate.sv|
 !i113 0
@@ -506,7 +511,7 @@ R11
 R21
 R22
 R23
-!i122 1184
+!i122 1346
 L0 83 16
 R12
 R13
@@ -533,7 +538,7 @@ R11
 R21
 R22
 R23
-!i122 1184
+!i122 1346
 L0 100 58
 R12
 R13
@@ -560,7 +565,7 @@ R11
 w1702480028
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/piezo_drv.sv
-!i122 1185
+!i122 1347
 L0 1 180
 R12
 R13
@@ -586,7 +591,7 @@ R11
 w1702480052
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM12.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM12.sv
-!i122 1187
+!i122 1349
 L0 1 83
 R12
 R13
@@ -613,7 +618,7 @@ R11
 R17
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM8.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/PWM8.sv
-!i122 1186
+!i122 1348
 L0 1 36
 R12
 R13
@@ -640,7 +645,7 @@ R11
 w1702480274
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RemoteComm.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/RemoteComm.sv
-!i122 1188
+!i122 1350
 L0 1 96
 R12
 R13
@@ -658,7 +663,7 @@ n@remote@comm
 vreset_synch
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/reset_synch.sv
 R9
-R20
+R29
 !i10b 1
 !s100 dXJH<`k@D>V2c=X3LAOnD1
 I@S=>PomEZ@>^QX1nSK8Lb0
@@ -667,7 +672,7 @@ R11
 w1702427972
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/reset_synch.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/reset_synch.sv
-!i122 1189
+!i122 1351
 L0 1 20
 R12
 R13
@@ -684,25 +689,25 @@ R7
 vRunnerPhysics
 R28
 R9
-R20
+R29
 !i10b 1
 !s100 8]Q;i3QKR1b7DOXn5bRMk0
 I:gR:MbV`YSR<ZGgJ5n<5A0
 S1
 R11
-R29
 R30
 R31
-!i122 1190
+R32
+!i122 1352
 L0 1 358
 R12
 R13
 r1
 !s85 0
 31
-R24
-R32
 R33
+R34
+R35
 !i113 0
 R15
 R16
@@ -711,7 +716,7 @@ n@runner@physics
 vsensor_intf
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv
 R9
-R20
+R29
 !i10b 1
 !s100 @AE0fE]<T4CkQl<I;3JWX2
 I1[b;`SORYMBzWcA`O<lAG2
@@ -720,14 +725,14 @@ R11
 R27
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv
-!i122 1191
+!i122 1353
 L0 1 370
 R12
 R13
 r1
 !s85 0
 31
-R24
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/sensor_intf.sv|
 !i113 0
@@ -737,7 +742,7 @@ R7
 vSPI_ADC128S
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_ADC128S.sv
 R9
-R34
+R29
 !i10b 1
 !s100 93oj0i;UV@::cHMPGHMJ>1
 Io@F@O9hc7Kg^2J28J2l0X3
@@ -746,14 +751,14 @@ R11
 R17
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_ADC128S.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_ADC128S.sv
-!i122 1192
+!i122 1354
 L0 1 140
 R12
 R13
 r1
 !s85 0
 31
-R24
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_ADC128S.sv|
 !i113 0
@@ -764,7 +769,7 @@ n@s@p@i_@a@d@c128@s
 vSPI_iNEMO4
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_iNEMO4.sv
 R9
-R34
+R29
 !i10b 1
 !s100 99RK0lJe7H=D_FonjE`d00
 IK]^YMf61Of>]FD@R;eL0W2
@@ -773,14 +778,14 @@ R11
 R17
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_iNEMO4.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_iNEMO4.sv
-!i122 1193
+!i122 1355
 L0 1 196
 R12
 R13
 r1
 !s85 0
 31
-R35
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_iNEMO4.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_iNEMO4.sv|
 !i113 0
@@ -791,7 +796,7 @@ n@s@p@i_i@n@e@m@o4
 vSPI_mnrch
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv
 R9
-R34
+R29
 !i10b 1
 !s100 zDJdc7W1kL[CX1li7nGYf2
 I3D=QBo?1UUNXjm9HYWg<n3
@@ -800,14 +805,14 @@ R11
 w1702480205
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv
-!i122 1194
+!i122 1356
 L0 1 124
 R12
 R13
 r1
 !s85 0
 31
-R35
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/SPI_mnrch.sv|
 !i113 0
@@ -818,7 +823,7 @@ n@s@p@i_mnrch
 vUART
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART.sv
 R9
-R34
+R29
 !i10b 1
 !s100 L2UBb[PP6?Goj^Ee5:1YK1
 IFOaW7??YJCIY6YP7nYzg33
@@ -827,14 +832,14 @@ R11
 w1698419065
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART.sv
-!i122 1195
+!i122 1357
 L0 1 24
 R12
 R13
 r1
 !s85 0
 31
-R35
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART.sv|
 !i113 0
@@ -845,7 +850,7 @@ n@u@a@r@t
 vUART_rcv
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv
 R9
-R34
+R29
 !i10b 1
 !s100 Qkl0J[7N;YJAB804Xl0dX2
 II8@Q3K;jZm69Kl_FhFHQJ2
@@ -854,14 +859,14 @@ R11
 w1702480296
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv
-!i122 1196
+!i122 1358
 R18
 R12
 R13
 r1
 !s85 0
 31
-R35
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_rcv.sv|
 !i113 0
@@ -872,7 +877,7 @@ n@u@a@r@t_rcv
 vUART_tx
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv
 R9
-R34
+R29
 !i10b 1
 !s100 bP7e_J1XWIaRDZ6[nJ:BT1
 IchjV=HN`H1J?5dc6i8]6;1
@@ -881,14 +886,14 @@ R11
 w1702340895
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv
-!i122 1197
+!i122 1359
 L0 1 113
 R12
 R13
 r1
 !s85 0
 31
-R35
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_tx.sv|
 !i113 0
@@ -899,7 +904,7 @@ n@u@a@r@t_tx
 vUART_wrapper
 2/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv
 R9
-R34
+R29
 !i10b 1
 !s100 z9XdW=`@odd^YDJ1KP71j2
 Igi>IGCjkXMb<YfHnzQ?l>0
@@ -908,14 +913,14 @@ R11
 w1702428471
 8/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv
 F/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv
-!i122 1198
+!i122 1360
 L0 1 77
 R12
 R13
 r1
 !s85 0
 31
-R35
+R33
 !s107 /filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-cover|sbcet3|-stats=none|/filespace/d/dagrawal23/win/desktop/ECE551/ECE551MazeRunner/UART_wrapper.sv|
 !i113 0

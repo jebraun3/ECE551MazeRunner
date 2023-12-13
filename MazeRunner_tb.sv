@@ -51,7 +51,7 @@ module MazeRunner_tb();
   
 					 
   initial begin
-	batt = 12'hDA0;  	// this is value to use with RunnerPhysics
+	batt = 12'hFFF;  	// this is value to use with RunnerPhysics
 
    //reset
    clk = 0;
@@ -83,6 +83,7 @@ module MazeRunner_tb();
     end
     join
     
+    batt = 12'hDFF;
     
 
 
@@ -128,7 +129,8 @@ module MazeRunner_tb();
    @(posedge clk);
    @(negedge clk);
   
-
+  
+  batt = 12'hDA0;
   //change heading command
    
    cmd = 16'h2000;
