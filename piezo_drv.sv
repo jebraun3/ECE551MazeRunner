@@ -4,6 +4,7 @@ module piezo_drv(clk, rst_n, batt_low, fanfare, piezo, piezo_n);
   input logic clk, rst_n, batt_low, fanfare;
   output logic piezo, piezo_n;
 
+  logic batt_low_rise, batt_low_ff;
   logic [23:0] dur_cnt;
   logic [14:0] freq_cnt;
   logic rst_dur, rst_freq;
@@ -23,6 +24,13 @@ module piezo_drv(clk, rst_n, batt_low, fanfare, piezo, piezo_n);
       freq_cnt <= (FAST_SIM)? freq_cnt + 16: freq_cnt + 1;
   end
 
+  always_ff @(posedge clk) begin
+  batt_low_ff <= batt_low;
+  end
+
+  assign batt_low_rise = (batt_low & ~batt_low_ff);
+
+
 
 
 
@@ -36,7 +44,7 @@ module piezo_drv(clk, rst_n, batt_low, fanfare, piezo, piezo_n);
     case (state)
 
     IDLE: begin
-      if(batt_low) begin
+      if(batt_low_rise) begin
         nxt_state = G6_LOWBAT;
         rst_freq = 1;
         rst_dur = 1;

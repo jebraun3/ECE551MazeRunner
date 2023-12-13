@@ -80,20 +80,17 @@ endmodule
 
 //////////////////////// P_term ///////////////////////////////
 
-module P_term(error, P_term_out, clk);
-	input signed [11:0] error;
+module P_term(err_sat, P_term_out, clk);
+	input signed [9:0] err_sat;
 	input logic clk;
 	output logic signed [13:0] P_term_out;
 	localparam signed [3:0] P_COEFF = 4'h3;
 	logic signed [9:0] err_sat;
 
-	assign err_sat = (error[11] === 0 && |error[10:9])?10'b0111111111:
-									 (error[11] === 1 && !(&error[10:9]))?10'b1000000000:
-										error[9:0];
 
   //pipeline flop
 	always_ff @(posedge clk)
-	 	P_term_out <=  P_COEFF * err_sat;
+	 	P_term_out <=  err_sat + err_sat + err_sat;
 
 endmodule
 
@@ -132,7 +129,7 @@ module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moving , hdn
 								(error[11] === 1 && !(&error[10:9]))?10'b1000000000:error[9:0];
 	end
 	
-  P_term P(.error(error) , .P_term_out(P_term_out), .clk(clk));
+  P_term P(.err_sat(err_sat) , .P_term_out(P_term_out), .clk(clk));
 
 	assign ext_P_term_out = {P_term_out[13],P_term_out} ;
 
