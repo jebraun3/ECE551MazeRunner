@@ -36,134 +36,134 @@ module piezo_drv(clk, rst_n, batt_low, fanfare, piezo, piezo_n);
     case (state)
 
     IDLE: begin
-            if(batt_low) begin
-              nxt_state = G6_LOWBAT;
-              rst_freq = 1;
-              rst_dur = 1;
-            end
-            else if (fanfare) begin
-              nxt_state = G6;
-              rst_freq = 1;
-              rst_dur = 1;
-            end
-          end
+      if(batt_low) begin
+        nxt_state = G6_LOWBAT;
+        rst_freq = 1;
+        rst_dur = 1;
+      end
+      else if (fanfare) begin
+        nxt_state = G6;
+        rst_freq = 1;
+        rst_dur = 1;
+      end
+    end
 
     G6_LOWBAT:  begin
-                  if (dur_cnt >= 8388608) begin
-                    rst_dur = 1;
-                    rst_freq = 1;
-                    nxt_state = C7_LOWBAT;
-                  end
-                  else if(freq_cnt < 16000)
-                    piezo = 1;
-                  else if(freq_cnt > 31888) begin
-                    rst_freq = 1;
-                  end 
-                end	
+      if (dur_cnt >= 8388608) begin
+        rst_dur = 1;
+        rst_freq = 1;
+        nxt_state = C7_LOWBAT;
+      end
+      else if(freq_cnt < 16000)
+        piezo = 1;
+      else if(freq_cnt > 31888) begin
+        rst_freq = 1;
+      end 
+    end	
 
     C7_LOWBAT: begin
-                if (dur_cnt >= 8388608) begin
-                  rst_dur = 1;
-                  rst_freq =1;
-                  nxt_state = E7_LOWBAT;
-                end
-                else if(freq_cnt < 12000)
-                  piezo = 1;
-                else if(freq_cnt > 23890) begin
-                  rst_freq = 1;
-                end 
-              end
+      if (dur_cnt >= 8388608) begin
+        rst_dur = 1;
+        rst_freq =1;
+        nxt_state = E7_LOWBAT;
+      end
+      else if(freq_cnt < 12000)
+        piezo = 1;
+      else if(freq_cnt > 23890) begin
+        rst_freq = 1;
+      end 
+    end
 
     E7_LOWBAT:  begin
-                  if (dur_cnt >= 8388608) begin
-                    rst_dur = 1;
-                    rst_freq =1;
-                    nxt_state = IDLE;
-                  end
-                  else if(freq_cnt < 9500)
-                    piezo = 1;
-                  else if(freq_cnt > 18960) begin
-                    rst_freq = 1;
-                  end 
-                end
+      if (dur_cnt >= 8388608) begin
+        rst_dur = 1;
+        rst_freq =1;
+        nxt_state = IDLE;
+      end
+      else if(freq_cnt < 9500)
+        piezo = 1;
+      else if(freq_cnt > 18960) begin
+        rst_freq = 1;
+      end 
+    end
     
     G6:	begin
-          if(dur_cnt > 8388608) begin
-            rst_dur = 1;
-            rst_freq = 1;
-            nxt_state = C7;
-          end
-          else if(freq_cnt < 16000)
-              piezo = 1;
-          else if(freq_cnt > 31888) begin
-              rst_freq = 1;
-          end 
-        end
+      if(dur_cnt > 8388608) begin
+        rst_dur = 1;
+        rst_freq = 1;
+        nxt_state = C7;
+      end
+      else if(freq_cnt < 16000)
+          piezo = 1;
+      else if(freq_cnt > 31888) begin
+          rst_freq = 1;
+      end 
+    end
     
     C7:	begin
-          if (dur_cnt >= 8388608) begin
-            rst_dur = 1;
-            rst_freq =1;
-            nxt_state = E7;
-          end
-          else if(freq_cnt < 12000)
-            piezo = 1;
-          else if(freq_cnt > 23890) begin
-            rst_freq = 1;
-          end 
-        end
+      if (dur_cnt >= 8388608) begin
+        rst_dur = 1;
+        rst_freq =1;
+        nxt_state = E7;
+      end
+      else if(freq_cnt < 12000)
+        piezo = 1;
+      else if(freq_cnt > 23890) begin
+        rst_freq = 1;
+      end 
+    end
     
     E7: begin
-          if (dur_cnt >= 8388608) begin
-            rst_dur = 1;
-            rst_freq =1;
-            nxt_state = G7;
-          end
-          else if(freq_cnt < 9500)
-            piezo = 1;
-          else if(freq_cnt > 18960) begin
-            rst_freq = 1;
-          end 
-        end
-    
+      if (dur_cnt >= 8388608) begin
+        rst_dur = 1;
+        rst_freq =1;
+        nxt_state = G7;
+      end
+      else if(freq_cnt < 9500)
+        piezo = 1;
+      else if(freq_cnt > 18960) begin
+        rst_freq = 1;
+      end 
+    end
+
     G7: begin
-          if(dur_cnt > 12582912) begin
-            rst_dur = 1;
-            rst_freq = 1;
-            nxt_state = E7_2;
-          end
-          else if(freq_cnt < 7971)
-              piezo = 1;
-          else if(freq_cnt > 15943) begin
-              rst_freq = 1;
-          end 
-        end
+      if(dur_cnt > 12582912) begin
+        rst_dur = 1;
+        rst_freq = 1;
+        nxt_state = E7_2;
+      end
+      else if(freq_cnt < 7971)
+          piezo = 1;
+      else if(freq_cnt > 15943) begin
+          rst_freq = 1;
+      end 
+    end
     
     E7_2:	begin
-            if (dur_cnt >= 8388608) begin
-              rst_dur = 1;
-              rst_freq =1;
-              nxt_state = G7_2;
-            end
-            else if(freq_cnt < 9500)
-              piezo = 1;
-            else if(freq_cnt > 18960) begin
-              rst_freq = 1;
-            end 
-          end
+      if (dur_cnt >= 8388608) begin
+        rst_dur = 1;
+        rst_freq =1;
+        nxt_state = G7_2;
+      end
+      else if(freq_cnt < 9500)
+        piezo = 1;
+      else if(freq_cnt > 18960) begin
+        rst_freq = 1;
+      end 
+    end
     
     G7_2:begin
-          if(dur_cnt > 12582912) begin
-            rst_dur = 1;
-            rst_freq = 1;
-            nxt_state = IDLE;
-          end
-          else if(freq_cnt < 7971)
-              piezo = 1;
-          else if(freq_cnt > 15943) begin
-              rst_freq = 1;
-          end 
-        end
+      if(dur_cnt > 12582912) begin
+        rst_dur = 1;
+        rst_freq = 1;
+        nxt_state = IDLE;
+      end
+      else if(freq_cnt < 7971)
+          piezo = 1;
+      else if(freq_cnt > 15943) begin
+          rst_freq = 1;
+      end 
+    end
     
     default: nxt_state = IDLE;
   endcase

@@ -53,43 +53,43 @@ module maze_solve(cmd_md, cmd0, lft_opn, rght_opn, mv_cmplt,sol_cmplt, clk, rst_
 
     case (state)
 
-      IDLE: begin
-              if(!cmd_md) begin
-                strt_mv = 1;
-                nxt_state = WAIT_FRWRD;
-              end
-            end
+      IDLE:begin
+        if(!cmd_md) begin
+          strt_mv = 1;
+          nxt_state = WAIT_FRWRD;
+        end
+      end
 
       WAIT_FRWRD: begin
-                    if(mv_cmplt) begin
-                      nxt_state = NEW_HDNG;
-                    end
-                  end
+        if(mv_cmplt) begin
+          nxt_state = NEW_HDNG;
+        end
+      end
 
-      NEW_HDNG: begin
-                  if(sol_cmplt)
-                    nxt_state = IDLE;
-                  else begin
-                    change_hdng = 1;
-                    nxt_state = STRT_HDNG;
-                  end
-                end
+      NEW_HDNG:begin
+        if(sol_cmplt)
+          nxt_state = IDLE;
+        else begin
+          change_hdng = 1;
+          nxt_state = STRT_HDNG;
+        end
+      end
               
-      STRT_HDNG:  begin
-                    strt_hdng = 1;
-                    nxt_state = WAIT_HDNG;
-                  end
+      STRT_HDNG:begin
+        strt_hdng = 1;
+        nxt_state = WAIT_HDNG;
+      end
       
-      WAIT_HDNG:  begin
-                    if(mv_cmplt) begin
-                      nxt_state = STRT_MV;
-                    end
-                  end
+      WAIT_HDNG:begin
+        if(mv_cmplt) begin
+          nxt_state = STRT_MV;
+        end
+      end
       
-      STRT_MV:  begin
-                  strt_mv = 1;
-                  nxt_state = WAIT_FRWRD;
-                end
+      STRT_MV:begin
+        strt_mv = 1;
+        nxt_state = WAIT_FRWRD;
+      end
     endcase
 	end
 

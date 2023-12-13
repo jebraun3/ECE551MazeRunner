@@ -52,7 +52,8 @@ module MazeRunner_tb();
 					 
   initial begin
 	batt = 12'hDA0;  	// this is value to use with RunnerPhysics
-   // << Your magic goes here >>'
+
+   //reset
    clk = 0;
    RST_n = 0;
    @(posedge clk);
@@ -64,8 +65,25 @@ module MazeRunner_tb();
    send_cmd = 1;
    @(negedge clk);
    send_cmd = 0;
-   @(posedge resp_rdy);
-    //do self check
+   
+   fork
+   begin: timeout1
+   repeat(80000) @(posedge clk);
+   end
+    begin
+      @(posedge iDUT.iNEMO.cal_done);
+      @(posedge resp_rdy);
+      if(resp !== 8'hA5) begin
+        $display("unexpected response from calibration");
+        $stop();
+      end
+      disable timeout1;
+      $display("Calibration test passed");
+
+    end
+    join
+    
+    
 
 
 
@@ -80,9 +98,33 @@ module MazeRunner_tb();
    send_cmd = 1;
    @(negedge clk);
    send_cmd = 0;
-   @(posedge resp_rdy);
-  //do self check
-
+    //do self check
+    fork 
+      begin : timeout2
+        repeat(1000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("change heading command timed out");
+        $stop();
+      end
+      begin
+        @(posedge iDUT.iCNTRL.at_hdng)
+        if (iPHYS.heading_robot[19:16] !== 4'h3 && iPHYS.heading_robot[19:16] !== 4'h4) begin
+          $display("heading not similar to requested heading");
+          $stop();
+        end
+        @(posedge resp_rdy);
+        if(resp !== 8'hA5) begin
+          $display("unexpected response from change heading");
+          $stop();
+        end
+        
+        $display("change heading test 1 passed");
+        disable timeout2;
+      end
+    join
+   
    @(posedge clk);
    @(negedge clk);
   
@@ -93,8 +135,31 @@ module MazeRunner_tb();
    send_cmd = 1;
    @(negedge clk);
    send_cmd = 0;
-   @(posedge resp_rdy);
-  //do self check
+   fork 
+      begin : timeout3
+        repeat(1000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("change heading command timed out");
+        $stop();
+      end
+      begin
+     @(posedge iDUT.iCNTRL.at_hdng)
+        if (iPHYS.heading_robot[19:16] !== 4'hF && iPHYS.heading_robot[19:16] !== 4'h0) begin
+          $display("heading not similar to requested heading");
+          $stop();
+        end
+        @(posedge resp_rdy);
+        if(resp !== 8'hA5) begin
+          $display("unexpected response from change heading");
+          $stop();
+        end
+        
+        $display("change heading test 2 passed");
+        disable timeout3;
+      end
+    join
 
    @(posedge clk);
    @(negedge clk);
@@ -104,37 +169,104 @@ module MazeRunner_tb();
   send_cmd = 1;
   @(negedge clk);
    send_cmd = 0;
-  @(posedge resp_rdy);
-  @(posedge clk);
-  @(negedge clk);
-
-  
-
-  //maze solve command with right affinity
-  cmd = 16'h6000;
-  send_cmd = 1;
-  @(negedge clk);
-   send_cmd = 0;
-  @(posedge resp_rdy);
-  @(posedge clk);
-  @(negedge clk);
- 
- 
-
-
-  
-  //
-    
-
+  fork 
+      begin : timeout4
+        repeat(1000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("change heading command timed out");
+        $stop();
+      end
+      begin
+        @(posedge resp_rdy);
+        if(resp !== 8'hA5) begin
+          $display("unexpected response from move");
+          $stop();
+        end
+        if (iPHYS.xx[14:12] !== 3'b010) begin
+          $display("x position not correct");
+          $stop();
+        end
+         if (iPHYS.yy[14:12] !== 3'b001) begin
+          $display("y position not correct");
+          $stop();
+        end
+        $display("move test passed");
+        disable timeout4;
+      end
+    join
    
+   @(posedge clk);
+   @(negedge clk);
+   //maze solve command with right affinity
+    cmd = 16'h6000;
+    send_cmd = 1;
+    @(posedge clk);
+    @(negedge clk);
+    send_cmd = 0;
+   
+ 
+  
+  fork 
+      begin : timeout5
+        repeat(60000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("maze solve command timed out");
+        $stop();
+      end
+      begin
+        @(posedge resp_rdy);
+        if(resp !== 8'hA5) begin
+          $display("unexpected response from maze solve");
+          $stop();
+        end
+        if (iPHYS.xx[14:12] !== 3'b001) begin
+          $display("x position not correct");
+          $stop();
+        end
+         if (iPHYS.yy[14:12] !== 3'b000) begin
+          $display("y position not correct");
+          $stop();
+        end
+        $display("maze solve test passed");
+        disable timeout5;
+      end
+    join
 
+  @(posedge clk);
+   @(negedge clk);
+ 
+  //low battery
+  batt = 12'h001;
+
+
+  fork 
+      begin : timeout6
+        repeat(1000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("batt_low timed out");
+        $stop();
+      end
+      begin
+          @(iDUT.ICHRG.batt_low)
+          $display("batt_low test passed");
+          disable timeout6;
+      end
+    join
+ 
+
+ 
+
+  $display("yahooooooooo!");
   $stop();
 
 
 
-
-
-	
   end
   
   always

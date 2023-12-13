@@ -77,17 +77,17 @@ module UART_rcv(clk , rst_n ,clr_rdy , rx_data, rdy, RX);
     set_rdy = 0;
     case(state)
       IDLE: begin
-              if(start)
-                nxt_state = RCVNG;
-            end
+        if(start)
+          nxt_state = RCVNG;
+      end
       
       RCVNG:  begin
-                receiving = 1;
-                if(bit_cnt === 4'b1010) begin
-                  set_rdy = 1;
-                  nxt_state = IDLE;
-                end
-              end
+        receiving = 1;
+        if(bit_cnt === 4'b1010) begin
+          set_rdy = 1;
+          nxt_state = IDLE;
+        end
+      end
     endcase
   end
 

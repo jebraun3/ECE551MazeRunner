@@ -60,56 +60,56 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
 		new_hdng = '0;
 		strt_mv = 0;
 		case (state)
-			IDLE:	begin
-							if(cmd_rdy) begin
-								clr_cmd_rdy = 1;
-								if(cmd[15:13] === 3'b000) begin
-									strt_cal = 1;
-									nxt_state = WAIT_CAL;
-								end
-								else if(cmd[15:13] === 3'b001) begin
-									new_hdng = cmd[11:0];
-									change_dsrd_hdng = 1;
-									strt_hdng = 1;
-									nxt_state = WAIT_MV;
-								end
-								else if(cmd[15:13] === 3'b010) begin
-									strt_mv = 1;
-									change_stp = 1;
-									
-									nxt_state = WAIT_MV;
-								end
-								else if(cmd[15:13] === 3'b011) begin
-									cmd_md = 0;
-									nxt_state = WAIT_SLV;
-								end
-								else 
-									nxt_state = state;
-							end
-						end
+			IDLE:begin
+				if(cmd_rdy) begin
+					clr_cmd_rdy = 1;
+					if(cmd[15:13] === 3'b000) begin
+						strt_cal = 1;
+						nxt_state = WAIT_CAL;
+					end
+					else if(cmd[15:13] === 3'b001) begin
+						new_hdng = cmd[11:0];
+						change_dsrd_hdng = 1;
+						strt_hdng = 1;
+						nxt_state = WAIT_MV;
+					end
+					else if(cmd[15:13] === 3'b010) begin
+						strt_mv = 1;
+						change_stp = 1;
+						
+						nxt_state = WAIT_MV;
+					end
+					else if(cmd[15:13] === 3'b011) begin
+						cmd_md = 0;
+						nxt_state = WAIT_SLV;
+					end
+					else 
+						nxt_state = state;
+				end
+			end
 
-			WAIT_CAL: 	begin
-										in_cal = 1;
-										if(cal_done) begin
-											send_resp = 1;
-											nxt_state = IDLE;
-										end
-									end
+			WAIT_CAL:begin
+				in_cal = 1;
+				if(cal_done) begin
+					send_resp = 1;
+					nxt_state = IDLE;
+				end
+			end
 
-			WAIT_MV:	begin
-									if(mv_cmplt) begin
-										send_resp = 1;
-										nxt_state = IDLE;
-									end
-								end
+			WAIT_MV:begin
+				if(mv_cmplt) begin
+					send_resp = 1;
+					nxt_state = IDLE;
+				end
+			end
 
 			WAIT_SLV: begin
-									cmd_md = 0;
-									if(sol_cmplt) begin
-									send_resp = 1;
-									nxt_state = IDLE;
-									end
-								end
+				cmd_md = 0;
+				if(sol_cmplt) begin
+					send_resp = 1;
+					nxt_state = IDLE;
+				end
+			end
 		endcase
 	end
 

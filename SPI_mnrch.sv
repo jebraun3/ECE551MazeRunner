@@ -61,35 +61,35 @@ module SPI_mnrch(rst_n, clk,wrt, MISO, wt_data, MOSI, SCLK, SS_n, done, rd_data)
     nxt_state = state;
     case(state)
       IDLE: begin
-              ld_SCLK = 1;
-              if(wrt) begin
-                init = 1;
-                nxt_state = FRONTPORCH;
-              end
-            end
+        ld_SCLK = 1;
+        if(wrt) begin
+          init = 1;
+          nxt_state = FRONTPORCH;
+        end
+      end
 
       FRONTPORCH:	begin
-                    if(shft_imm)
-                      nxt_state = TRANSACTION;
-                  end
+        if(shft_imm)
+          nxt_state = TRANSACTION;
+      end
 
       TRANSACTION:  begin
-                      if(done15) begin
-                        nxt_state = BACKPORCH;
-                      end
-                      else if(shft_imm) begin
-                        shft = 1;
-                      end
-                    end
+        if(done15) begin
+          nxt_state = BACKPORCH;
+        end
+        else if(shft_imm) begin
+          shft = 1;
+        end
+      end
 
-      BACKPORCH:  begin
-                    if(shft_imm) begin
-                      ld_SCLK = 1;
-                      shft = 1;
-                      set_done = 1;
-                      nxt_state = IDLE;
-                    end
-                  end
+      BACKPORCH: begin
+        if(shft_imm) begin
+          ld_SCLK = 1;
+          shft = 1;
+          set_done = 1;
+          nxt_state = IDLE;
+        end
+      end
     endcase
   end
 

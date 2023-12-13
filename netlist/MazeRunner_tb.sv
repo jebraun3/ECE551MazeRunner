@@ -122,7 +122,7 @@ module MazeRunner_tb();
           $display("heading not similar to requested heading");
           $stop();
         end
-        $display("change heading done");
+        $display("change heading done heading changed to %h",iPHYS.heading_robot[19:8]);
         disable timeout2;
       end
     join

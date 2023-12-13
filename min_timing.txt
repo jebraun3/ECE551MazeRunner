@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : MazeRunner
 Version: U-2022.12-SP4
-Date   : Tue Dec 12 20:23:28 2023
+Date   : Wed Dec 13 09:53:50 2023
 ****************************************
 
 Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
@@ -30,7 +30,7 @@ Wire Load Model Mode: enclosed
   clock network delay (ideal)              0.00       0.00
   iIR/smpl_cnt_reg[0]/CLK (DFFX1_LVT)      0.00       0.00 r
   iIR/smpl_cnt_reg[0]/QN (DFFX1_LVT)       0.06       0.06 f
-  U2249/Y (AO22X1_LVT)                     0.05       0.11 f
+  U2238/Y (AO22X1_LVT)                     0.05       0.11 f
   iIR/smpl_cnt_reg[0]/D (DFFX1_LVT)        0.01       0.12 f
   data arrival time                                   0.12
 

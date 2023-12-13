@@ -46,33 +46,33 @@ always_comb begin
 	trmt = 0;
 
 	case (state)
-	IDLE: 			begin
-								if(send_cmd) begin
-									byte_sel = 1;
-									trmt = 1;
-									next_state = UPPER_BYTE;
-								end
-							end
-	
-	UPPER_BYTE: begin
-								if(tx_done)begin
-									byte_sel = 0;
-									trmt = 1;
-									next_state = LOWER_BYTE;
-								end
-							end
-	
-	LOWER_BYTE: begin
-								if(tx_done)begin
-								set_cmd_snt = 1;
-								next_state = WAIT;
-								end
-							end
-	
-	WAIT:				begin
-								if(resp_rdy)
-								next_state = IDLE;
-							end
+		IDLE: begin
+			if(send_cmd) begin
+				byte_sel = 1;
+				trmt = 1;
+				next_state = UPPER_BYTE;
+			end
+		end
+		
+		UPPER_BYTE: begin
+			if(tx_done)begin
+				byte_sel = 0;
+				trmt = 1;
+				next_state = LOWER_BYTE;
+			end
+		end
+		
+		LOWER_BYTE: begin
+			if(tx_done)begin
+			set_cmd_snt = 1;
+			next_state = WAIT;
+			end
+		end
+		
+		WAIT:  begin
+			if(resp_rdy)
+			next_state = IDLE;
+		end
 	endcase
 end
 

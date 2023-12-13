@@ -101,59 +101,59 @@ module inert_intf(clk,rst_n,strt_cal,cal_done,heading,rdy,IR_Dtrm,
   
   case (state)
   
-  INIT1: 	begin
-						wt_data = 16'h0D02;
-						if(&timer) begin
-							wrt = 1;
-							nxt_state = INIT2;
-						end
-         	end
+  INIT1:begin
+    wt_data = 16'h0D02;
+    if(&timer) begin
+      wrt = 1;
+      nxt_state = INIT2;
+    end
+  end
   
-	INIT2: 	begin
-						wt_data = 16'h1160;
-						if(done) begin 
-							wrt = 1;
-							nxt_state = INIT3;
-						end
-         	end
+	INIT2:begin
+    wt_data = 16'h1160;
+    if(done) begin 
+      wrt = 1;
+      nxt_state = INIT3;
+    end
+  end
   
-	INIT3: 	begin
-						wt_data = 16'h1440;
-						if(done) begin 
-							wrt = 1;
-							nxt_state = WAIT;
-						end
-				 	end
+	INIT3:begin
+    wt_data = 16'h1440;
+    if(done) begin 
+      wrt = 1;
+      nxt_state = WAIT;
+    end
+  end
   
-  WAIT:  	begin
-            if(ff2_INT) begin
-              wt_data = 16'hA700;
-              wrt = 1;
-              nxt_state = READH;
-            end
-				 	end
+  WAIT:begin
+    if(ff2_INT) begin
+      wt_data = 16'hA700;
+      wrt = 1;
+      nxt_state = READH;
+    end
+  end
   
-  READH: 	begin
-						if(done) begin
-							C_Y_H = 1;
-							wt_data = 16'hA600;
-							wrt = 1;
-							nxt_state = READL;
-						end
-        	end
+  READH:begin
+    if(done) begin
+      C_Y_H = 1;
+      wt_data = 16'hA600;
+      wrt = 1;
+      nxt_state = READL;
+    end
+  end
   
-	READL: 	begin
-						if(done) begin
-							C_Y_L = 1;
-							nxt_state = DONE;
-						end
-         	end
+	READL:begin
+    if(done) begin
+      C_Y_L = 1;
+      nxt_state = DONE;
+    end
+  end
   
-	DONE: begin
-          vld = 1;
-          nxt_state = WAIT;
-        end 
-	
+	DONE:begin
+    vld = 1;
+    nxt_state = WAIT;
+  end 
+
 	default: nxt_state = INIT1;
   endcase
   end

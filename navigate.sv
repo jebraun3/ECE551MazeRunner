@@ -51,7 +51,7 @@ module navigate(clk,rst_n,strt_hdng,strt_mv,stp_lft,stp_rght,mv_cmplt,hdng_rdy,m
 	  frwrd_spd <= ((dec_frwrd_fast) && (frwrd_spd>{2'h0,frwrd_inc,3'b000})) ? frwrd_spd - {2'h0,frwrd_inc,3'b000} : // 8x accel rate
                     (dec_frwrd_fast) ? 11'h000 :	  // if non zero but smaller than dec amnt set to zero.
 	                (frwrd_spd>{4'h0,frwrd_inc,1'b0}) ? frwrd_spd - {4'h0,frwrd_inc,1'b0} : // slow down at 2x accel rate
-					11'h000;
+					        11'h000;
 
  // << Your implementation of ancillary circuits and SM >>	
 
@@ -80,57 +80,58 @@ module navigate(clk,rst_n,strt_hdng,strt_mv,stp_lft,stp_rght,mv_cmplt,hdng_rdy,m
     init_frwrd = 0;
     nxt_state = state;
     case(state) 
-      IDLE: begin
-              if(strt_hdng) begin
-                nxt_state = HEADING;
-              end
-              if(strt_mv) begin
-                init_frwrd = 1;
-                nxt_state = ACCELERATE;
-              end
-            end
+      IDLE:begin
+        if(strt_hdng) begin
+          nxt_state = HEADING;
+        end
+        if(strt_mv) begin
+          init_frwrd = 1;
+          nxt_state = ACCELERATE;
+        end
+      end
       
-      HEADING:  begin
-                  if(at_hdng_rise) begin
-                    mv_cmplt = 1;
-                    nxt_state = IDLE;
-                  end 
-                  else begin
-                    moving = 1;
-                  end
-                end
+      HEADING:begin
+        if(at_hdng_rise) begin
+          mv_cmplt = 1;
+          nxt_state = IDLE;
+        end 
+        else begin
+          moving = 1;
+        end
+      end
       
-      ACCELERATE: begin
-                    inc_frwrd = 1;
-                    moving = 1;
-                    if(!frwrd_opn) begin
-                      nxt_state = FASTSTOP;
-                    end
-                    else if((lft_opn_rise && stp_lft) || (rght_opn_rise && stp_rght)) begin 
-                      nxt_state = STOP;
-                    end
-                  end
-      STOP:   begin 
-                if(frwrd_spd == 0)begin
-                  mv_cmplt = 1;
-                  nxt_state = IDLE;
-                end
-                else begin
-                  dec_frwrd = 1;
-                  moving = 1;
-                end
-              end
+      ACCELERATE:begin
+        inc_frwrd = 1;
+        moving = 1;
+        if(!frwrd_opn) begin
+          nxt_state = FASTSTOP;
+        end
+        else if((lft_opn_rise && stp_lft) || (rght_opn_rise && stp_rght)) begin 
+          nxt_state = STOP;
+        end
+      end
+      
+      STOP:begin 
+        if(frwrd_spd == 0)begin
+          mv_cmplt = 1;
+          nxt_state = IDLE;
+        end
+        else begin
+          dec_frwrd = 1;
+          moving = 1;
+        end
+      end
       
       FASTSTOP: begin 
-                  if(frwrd_spd == 0)begin
-                    mv_cmplt = 1;
-                    nxt_state = IDLE;
-                  end
-                  else begin
-                    dec_frwrd_fast = 1;
-                    moving = 1;
-                  end
-                end
+        if(frwrd_spd == 0)begin
+          mv_cmplt = 1;
+          nxt_state = IDLE;
+        end
+        else begin
+          dec_frwrd_fast = 1;
+          moving = 1;
+        end
+      end
       default: nxt_state = FASTSTOP; //stop immediately in case undefined state
     endcase
    end

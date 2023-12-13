@@ -22,17 +22,17 @@ set_max_transition 0.125 [current_design]
 
 
 #set max area to zero lol!
-#set_max_area 0
+set_max_area 0
 
 set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
 
 #compile
-compile -map_effort medium 
+compile -map_effort high 
 
 #flatten hirearchy to remove designwares and compile again
 ungroup -all -flatten
 set_fix_hold clk
-compile -map_effort medium
+compile -map_effort high
 
 # timing and area reports
 report_timing -delay min  > min_timing.txt

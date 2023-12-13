@@ -12,13 +12,13 @@ R1 = 0;
 S2 = 0;
 R2 = 0;
 if(cnt >= NONOVERLAP)
-S1 = 1;
+	S1 = 1;
 if(cnt >= (duty+NONOVERLAP))
-S2 = 1;
+	S2 = 1;
 if(cnt >= duty)
-R1 = 1;
+	R1 = 1;
 if(&cnt)
-R2 = 1;
+	R2 = 1;
 
 end
 

@@ -154,8 +154,8 @@ module RunnerPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
 	heading_robot = 20'h00000;		// start North
 	xx = 15'h2800;			// start 2.5 squares from left
 	yy = 15'h800;			// start 0.5 squares up.
-	magnet_pos_xx = 7'h38;	// magnet pos is middle of (3,3)
-	magnet_pos_yy = 7'h38;
+	magnet_pos_xx = 7'h18;	// magnet pos is middle of (3,3)
+	magnet_pos_yy = 7'h08;
 	mazeModel[0][0] = 4'h5;	// SW
 	mazeModel[1][0] = 4'h6;	// SE
 	mazeModel[2][0] = 4'h3;	// EW
