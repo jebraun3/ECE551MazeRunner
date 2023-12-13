@@ -72,7 +72,7 @@ module D_term(err_sat, hdng_vld, rst_n, clk ,D_term);
 
 	assign diff_sat = (diff[10] === 0 && |diff[9:7])?8'b01111111:
 									  (diff[10] === 1 && !(&diff[9:7]))?8'b10000000:diff[7:0];
-
+  //pipeline flop
 	always_ff @(posedge clk)					
 		 D_term <= diff_sat * D_COEFF;
 
@@ -91,7 +91,8 @@ module P_term(error, P_term_out, clk);
 									 (error[11] === 1 && !(&error[10:9]))?10'b1000000000:
 										error[9:0];
 
-	 always_ff @(posedge clk)
+  //pipeline flop
+	always_ff @(posedge clk)
 	 	P_term_out <=  P_COEFF * err_sat;
 
 endmodule
@@ -124,12 +125,14 @@ module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moving , hdn
 
 	assign error[11:0] = actl_hdng - dsrd_hdng;
 	assign ext_frwrd_spd = {1'b0,frwrd_spd} ;
+
+  //pipeline flop
 	always_ff @(posedge clk) begin
 		err_sat <= (error[11] === 0 && |error[10:9])?10'b0111111111:
-										(error[11] === 1 && !(&error[10:9]))?10'b1000000000:
-											error[9:0];
+								(error[11] === 1 && !(&error[10:9]))?10'b1000000000:error[9:0];
 	end
-	P_term P(.error(error) , .P_term_out(P_term_out), .clk(clk));
+	
+  P_term P(.error(error) , .P_term_out(P_term_out), .clk(clk));
 
 	assign ext_P_term_out = {P_term_out[13],P_term_out} ;
 
@@ -142,10 +145,9 @@ module PID(actl_hdng , dsrd_hdng , lft_spd , rght_spd , clk, rst_n ,moving , hdn
 	assign ext_D_term_out = {{2{D_term_out[12]}},D_term_out} ;
 
 	assign sum = ext_D_term_out + ext_I_term_out + ext_P_term_out ;
-	//flopping leftspd and right speed to pipeline
-    
-
-	always_ff @(posedge clk) begin
+	
+  //flopping leftspd,right speed and at heading to pipeline
+  always_ff @(posedge clk) begin
 		lft_spd <=  (moving)? sum[14:3] +  ext_frwrd_spd : 12'h000;
 		rght_spd <=  (moving)?  ext_frwrd_spd - sum[14:3]: 12'h000;
 		at_hdng <= (err_sat < low_err_pos && err_sat > low_err_neg);

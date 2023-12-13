@@ -1,5 +1,5 @@
 #load desing
-read_file -format sverilog {navigate_shell.sv A2D_intf.sv reset_synch.sv cmd_proc.sv inert_intf.sv inertial_integrator.sv IR_Math.sv maze_solve.sv MazeRunner.sv MtrDrv.sv PID.sv piezo_drv.sv PWM8.sv PWM12.sv sensor_intf.sv SPI_mnrch.sv UART.sv UART_rcv.sv UART_tx.sv UART_wrapper.sv DutyScaleROM.sv }
+read_file -format sverilog {navigate.sv A2D_intf.sv reset_synch.sv cmd_proc.sv inert_intf.sv inertial_integrator.sv IR_Math.sv maze_solve.sv MazeRunner.sv MtrDrv.sv PID.sv piezo_drv.sv PWM8.sv PWM12.sv sensor_intf.sv SPI_mnrch.sv UART.sv UART_rcv.sv UART_tx.sv UART_wrapper.sv DutyScaleROM.sv }
 set current_design MazeRunner
 link
 

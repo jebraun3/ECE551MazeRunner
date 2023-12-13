@@ -52,92 +52,84 @@ module MazeRunner_tb();
   
 					 
   initial begin
-	batt = 12'hDA0;  	// this is value to use with RunnerPhysics
-   // << Your magic goes here >>'
-   clk = 0;
-   RST_n = 0;
-   send_cmd = 0;
-   cmd = 16'h0000;
-   @(posedge clk);
-   @(negedge clk);
-   RST_n = 1;
-
-   //calibrate command test
-   cmd = 16'h0000;
-   send_cmd = 1;
-   @(negedge clk);
-   send_cmd = 0;
-   @(posedge resp_rdy);
-    //do self check
-
-
-
-   @(posedge clk);
-   @(negedge clk);
-
-   
-   
-   //change heading command
-   
-   cmd = 16'h23FF;
-   send_cmd = 1;
-   @(negedge clk);
-   send_cmd = 0;
-   @(posedge resp_rdy);
-  //do self check
-
-   @(posedge clk);
-   @(negedge clk);
-  
-
-  //change heading command
-   
-   cmd = 16'h2000;
-   send_cmd = 1;
-   @(negedge clk);
-   send_cmd = 0;
-   @(posedge resp_rdy);
-  //do self check
-
-   @(posedge clk);
-   @(negedge clk);
-
-  //move command to stop at left opening
-  cmd = 16'h4002;
-  send_cmd = 1;
-  @(negedge clk);
-   send_cmd = 0;
-  @(posedge resp_rdy);
-  @(posedge clk);
-  @(negedge clk);
-
-  
-
-  //maze solve command with left affinity
-  cmd = 16'h6001;
-  send_cmd = 1;
-  @(negedge clk);
-   send_cmd = 0;
-  @(posedge resp_rdy);
-  @(posedge clk);
-  @(negedge clk);
- 
- 
-
-
-  
-  //
+	  batt = 12'hDA0;  	// this is value to use with RunnerPhysics
     
+    //reset
+    clk = 0;
+    RST_n = 0;
+    send_cmd = 0;
+    cmd = 16'h0000;
+    @(posedge clk);
+    @(negedge clk);
+    RST_n = 1;
 
-   
+    //calibrate command test
+    cmd = 16'h0000;
+    send_cmd = 1;
+    @(negedge clk);
+    send_cmd = 0;
+    //wait for positive ack
 
-  $stop();
+    fork 
+      begin : timeout1
+        repeat(1000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("calibration command timed out");
+        $stop();
+      end
+      begin
+        @(posedge resp_rdy);
+        if(resp !== 8'hA5) begin
+          $display("unexpected response");
+          $stop();
+        end
+        $display("calibartion done");
+        disable timeout1;
+      end
+    join
 
+    //wait for remote comm to come back to idle
+    @(posedge clk);
+    @(negedge clk);
 
+    
+    
+    //change heading command
+    cmd = 16'h23FF;
+    send_cmd = 1;
+    @(negedge clk);
+    send_cmd = 0;
+    @(posedge resp_rdy);
+    //do self check
+    fork 
+      begin : timeout2
+        repeat(1000000) begin
+          @(posedge clk);
+          @(negedge clk);
+        end
+        $display("change heading command timed out");
+        $stop();
+      end
+      begin
+        @(posedge resp_rdy);
+        if(resp !== 8'hA5) begin
+          $display("unexpected response");
+          $stop();
+        end
+        if (iPHYS.heading_robot[19:12] !== 6'h3F]) begin
+          $display("heading not similat to requested heading");
+          $stop();
+        end
+        $display("change heading done");
+        disable timeout2;
+      end
+    join
 
+    $display("YAHOO! calibrate and change heading test passed");
 
-
-	
+    $stop();
   end
   
   always

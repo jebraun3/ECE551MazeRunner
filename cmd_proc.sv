@@ -21,8 +21,8 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
 	always_ff @(posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			dsrd_hdng <= '0;
-		else
-			dsrd_hdng <= (change_dsrd_hdng)?new_hdng:dsrd_hdng;
+		else if(change_dsrd_hdng)
+			dsrd_hdng <= new_hdng;
 	end
 
 	//ff to register stp_left/right
@@ -31,13 +31,13 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
 			stp_lft <= 0;
 			stp_rght <= 0;
 		end
-		else begin
-			stp_lft <= (change_stp)?new_stp_lft:stp_lft;
-			stp_rght <= (change_stp)?new_stp_rght:stp_rght;
+		else if(change_stp) begin
+			stp_lft <= new_stp_lft;
+			stp_rght <= new_stp_rght;
 		end
 	end
  
- //state ff
+ 	//state ff
 	always_ff @(posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			state <= IDLE;
@@ -86,26 +86,27 @@ module cmd_proc(cmd, cmd_rdy, clk, rst_n, cal_done, sol_cmplt, mv_cmplt, dsrd_hd
 									nxt_state = state;
 							end
 						end
-			
-			WAIT_CAL: begin
-									in_cal = 1;
-									if(cal_done) begin
-										send_resp = 1;
-										nxt_state = IDLE;
+
+			WAIT_CAL: 	begin
+										in_cal = 1;
+										if(cal_done) begin
+											send_resp = 1;
+											nxt_state = IDLE;
+										end
 									end
-								end
-									
+
 			WAIT_MV:	begin
 									if(mv_cmplt) begin
 										send_resp = 1;
 										nxt_state = IDLE;
 									end
 								end
+
 			WAIT_SLV: begin
 									cmd_md = 0;
 									if(sol_cmplt) begin
-										send_resp = 1;
-										nxt_state = IDLE;
+									send_resp = 1;
+									nxt_state = IDLE;
 									end
 								end
 		endcase

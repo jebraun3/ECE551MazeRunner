@@ -21,76 +21,76 @@ module maze_solve(cmd_md, cmd0, lft_opn, rght_opn, mv_cmplt,sol_cmplt, clk, rst_
 
 	typedef enum logic [2:0] {IDLE, WAIT_FRWRD, STRT_HDNG,STRT_MV, NEW_HDNG, WAIT_HDNG} state_t;
 	
+  //comb logic for new dsrd heaading
 	always_comb begin
-	
-	if((cmd0 && lft_opn) || (~cmd0 && ~rght_opn && lft_opn)) begin
-	//turn left
-	new_hdng = (dsrd_hdng === 12'h000)?12'h3FF:
-											 (dsrd_hdng === 12'h3ff)?12'h7ff:
-											 (dsrd_hdng === 12'h7ff)?12'hC00:12'h000;
-	end
-	else if(rght_opn) begin
-	//turn right
-	new_hdng = (dsrd_hdng === 12'h000)?12'hC00:
-											 (dsrd_hdng === 12'hC00)?12'h7ff:
-											 (dsrd_hdng === 12'h7ff)?12'h3ff:12'h000;
-	end
-	else begin
-	//pull a 180
-	new_hdng = (dsrd_hdng === 12'h000)?12'h7ff:
-											 (dsrd_hdng === 12'hC00)?12'h3ff:
-											 (dsrd_hdng === 12'h7ff)?12'h000:12'hC00;
-	end
-	
+	  if((cmd0 && lft_opn) || (~cmd0 && ~rght_opn && lft_opn)) begin
+      //turn left
+      new_hdng = (dsrd_hdng === 12'h000)?12'h3FF:
+                  (dsrd_hdng === 12'h3ff)?12'h7ff:
+                  (dsrd_hdng === 12'h7ff)?12'hC00:12'h000;
+    end
+    else if(rght_opn) begin
+      //turn right
+      new_hdng = (dsrd_hdng === 12'h000)?12'hC00:
+                  (dsrd_hdng === 12'hC00)?12'h7ff:
+                  (dsrd_hdng === 12'h7ff)?12'h3ff:12'h000;
+    end
+    else begin
+      //pull a 180
+      new_hdng = (dsrd_hdng === 12'h000)?12'h7ff:
+                  (dsrd_hdng === 12'hC00)?12'h3ff:
+                  (dsrd_hdng === 12'h7ff)?12'h000:12'hC00;
+    end
 	end
 	state_t state, nxt_state;
 	 
 	always_comb begin
-	nxt_state = state;
-	change_hdng = 0;
-	strt_hdng = 0;
-	strt_mv = 0;
-	
+    nxt_state = state;
+    change_hdng = 0;
+    strt_hdng = 0;
+    strt_mv = 0;
+    
 
-	case (state)
+    case (state)
 
-	IDLE: begin
-			if(!cmd_md) begin
-				strt_mv = 1;
-				nxt_state = WAIT_FRWRD;
-			end
-			end
+      IDLE: begin
+              if(!cmd_md) begin
+                strt_mv = 1;
+                nxt_state = WAIT_FRWRD;
+              end
+            end
 
-	WAIT_FRWRD: begin
-					if(mv_cmplt) begin
-						nxt_state = NEW_HDNG;
-					end
-				end
+      WAIT_FRWRD: begin
+                    if(mv_cmplt) begin
+                      nxt_state = NEW_HDNG;
+                    end
+                  end
 
-	NEW_HDNG: begin
-				if(sol_cmplt)
-					nxt_state = IDLE;
-				else begin
-					change_hdng = 1;
-					nxt_state = STRT_HDNG;
-				end
-			 end
-					
-	STRT_HDNG: begin
-							strt_hdng = 1;
-							nxt_state = WAIT_HDNG;
-						end
-	WAIT_HDNG: begin
-							if(mv_cmplt) begin
-							
-							 nxt_state = STRT_MV;
-							end
-						end
-	STRT_MV: begin
-			strt_mv = 1;
-			nxt_state = WAIT_FRWRD;
-	end
-	endcase
+      NEW_HDNG: begin
+                  if(sol_cmplt)
+                    nxt_state = IDLE;
+                  else begin
+                    change_hdng = 1;
+                    nxt_state = STRT_HDNG;
+                  end
+                end
+              
+      STRT_HDNG:  begin
+                    strt_hdng = 1;
+                    nxt_state = WAIT_HDNG;
+                  end
+      
+      WAIT_HDNG:  begin
+                    if(mv_cmplt) begin
+                      nxt_state = STRT_MV;
+                    end
+                  end
+      
+      STRT_MV:  begin
+                  strt_mv = 1;
+                  nxt_state = WAIT_FRWRD;
+                end
+    endcase
 	end
 
 

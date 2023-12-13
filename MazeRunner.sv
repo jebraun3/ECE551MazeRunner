@@ -122,18 +122,13 @@ module MazeRunner(
   //////////////////////////////////////////////////////////////////////////
   IR_math #(NOM_IR) iIR_adj(.lft_opn(lft_opn),.rght_opn(rght_opn),.lft_IR(lft_IR),.rght_IR(rght_IR),
                             .IR_Dtrm(IR_Dtrm),.en_fusion(en_fusion),.dsrd_hdng(dsrd_hdng),
-				            .dsrd_hdng_adj(dsrd_hdng_adj));
+				                  .dsrd_hdng_adj(dsrd_hdng_adj), .clk(clk));
 
-  //adding flop(s) for pipelining
-  logic [11:0] adj_dsrd_hdng_pipelined;
-
-  always_ff @(posedge clk)
-    adj_dsrd_hdng_pipelined <= dsrd_hdng_adj;
-    
+ 
   /////////////////////////////////
   // Instantiate PID controller //
   ///////////////////////////////			 
-  PID iCNTRL(.clk(clk),.rst_n(rst_n),.moving(moving),.dsrd_hdng(adj_dsrd_hdng_pipelined),.actl_hdng(actl_hdng),
+  PID iCNTRL(.clk(clk),.rst_n(rst_n),.moving(moving),.dsrd_hdng(dsrd_hdng_adj),.actl_hdng(actl_hdng),
              .hdng_vld(hdng_rdy),.at_hdng(at_hdng),.frwrd_spd(frwrd_spd),.lft_spd(lft_spd),
 			 .rght_spd(rght_spd));
 					 
